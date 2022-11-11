@@ -1,0 +1,19 @@
+/* news */ 
+.p-newsingle{
+    margin-top: 22px;
+    .u-btn__top{
+        margin-top: 53px;
+        img{
+            max-width: 356px;
+            width: 90%;
+        }
+    }
+}
+.c-newsingle{
+    &__content{
+        margin-top: 154px;
+        font-family: $font-family-gothic;
+        font-weight: bold;
+    }
+}
+

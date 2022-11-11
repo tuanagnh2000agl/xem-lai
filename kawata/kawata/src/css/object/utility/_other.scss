@@ -1,0 +1,28 @@
+.u-textCircle {
+    padding-left: 20px;
+    font-size: (14px / $font-size) * 1rem;
+    font-weight: 700;
+    line-height: 1.7;
+    text-indent: -18px;
+    display: block;
+    &.--color1 {
+        color: #ea285f;
+    }
+}
+.u-text {
+    font-weight: 700;
+    font-size: (16px / $font-size) * 1rem;
+    color: #141c28;
+    line-height: 2;
+}
+//Phone
+// --------------------------------------------------
+@include media-breakpoint-sp {
+    .u-textCircle {
+        font-size: (13px / $font-size) * 1rem;
+        line-height: 1.88;
+    }
+    .u-text {
+        line-height: 1.75;
+    }
+}

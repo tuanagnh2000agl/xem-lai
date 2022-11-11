@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">  
+	<title><%= getHeadPageTitle(); %></title>
+	<meta name="description" content="<%= getDescription(); %>">
+	<meta property="og:locale" content="ja_JP">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="<%= getSiteUrl(); %>">
+	<meta property="og:title" content="<%= getSiteTitle(); %>">
+	<meta property="og:description" content="<%= getDescription(); %>">
+	<meta property="og:image" content="<%= getSiteUrl(); %>/ogp.jpg">
+	<meta property="og:site_name" content="<%= getSiteTitle(); %>">
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=yes">
+	<meta name="format-detection" content="telephone=no,email=no,address=no">
+	<link rel="shortcut icon" href="<%= getRelativePath('/favicon.ico'); %>">
+	<link rel="apple-touch-icon" href="<%= getRelativePath('/apple-touch-icon.png'); %>">
+	<link rel="stylesheet" href="<%= getRelativePath('/style.css'); %>">
+</head>
+<body class="<%= getBodyClass(); %>">
+	<div id="all">
+		<header id="header" class="l-header">
+			<div class="l-header__bar"></div>
+			<div class="l-header__inner">
+				<div class="l-header__content">
+					<div class="l-header__logo"><h1><a href="<%= getRelativePath('/'); %>"><span>ロゴ</span></a></h1></div>
+					<nav class="l-header__nav">
+						<div class="l-header__nav__inner">
+							<div class="l-header__contents">
+								<div class="l-header__notice"><a href=""><span>重要なお知らせ</span></a></div>
+								<ul class="l-header__subNav">
+									<li class="l-header__subNav__item">
+										<a href="">お知らせ</a>
+									</li>
+									<li class="l-header__subNav__item">
+										<a href="">採用情報</a>
+									</li>
+									<li class="l-header__subNav__item">
+										<a href="">よくあるご質問</a>
+									</li>
+									<li class="l-header__subNav__item">
+										<a href="">交通アクセス</a>
+									</li>
+									<li class="l-header__subNav__item --sns u-only__widePc">
+										<a href="https://www.facebook.com/kawata.clinic/" target="_blank"><img src="<%= getRelativePath('/images/face_icon.png'); %>" alt="facebook" width=""></a>
+										<a href="https://www.instagram.com/kawatasanfujinka/" target="_blank"><img src="<%= getRelativePath('/images/ins_icon.png'); %>" alt="instagram" width=""></a>
+									</li>
+								</ul>
+								<ul class="l-header__list">
+									<li class="l-header__item --top">
+										<a href="<%= getRelativePath('/'); %>">
+											<span>ホーム</span>
+										</a>
+									</li>
+									<li class="l-header__item --subitem --about">
+										<a href="">
+											<span>当院について</span>
+										</a>
+										<div class="l-header__subitem">
+											<div class="l-header__subitem__inner">
+												<div class="l-header__subitem__contents">
+													<div class="l-header__subitem__head">
+														<div class="c-heading1 --size1 --color4">
+															<strong>About us</strong>
+															<span>当院について</span>
+														</div>
+														<ul>
+															<li><a href="">お知らせ</a></li>
+															<li><a href="">採用情報</a></li>
+															<li><a href="">よくあるご質問</a></li>
+															<li><a href="">交通アクセス</a></li>
+														</ul>
+													</div>
+													<ul class="l-header__subitem__list">
+														<li>
+															<a href="">
+																<strong>01</strong>
+																<span>ごあいさつ</span>
+															</a>
+														</li> 
+														<li>
+															<a href="">
+																<strong>02</strong>
+																<span>医師・スタッフ紹介</span>
+															</a>
+														</li>
+														<li>
+															<a href="">
+																<strong>03</strong>
+																<span>院内紹介</span>
+															</a>
+														</li>
+														<li>
+															<a href="">
+																<strong>04</strong>
+																<span>採用情報</span>
+															</a>
+														</li>
+														<li>
+															<a href="">
+																<strong>05 </strong>
+																<span>個人情報保護方針</span>
+															</a>
+														</li>
+													</ul>
+												</div>
+											</div>
+											<div class="l-header__subitem__btn">
+												<span>閉じる</span>
+											</div>
+										</div>
+									</li>
+									<li class="l-header__item --subitem --contact">
+										<a href="<%= getRelativePath('/contact'); %>">
+											<span>診療のご案内</span>
+										</a>
+										<div class="l-header__subitem">
+											<div class="l-header__subitem__inner">
+												<div class="l-header__subitem__contents">
+													<div class="l-header__subitem__head">
+														<div class="c-heading1 --size1 --color4">
+															<strong>Our service</strong>
+															<span>診療のご案内</span>
+														</div>
+														<ul>
+															<li><a href="">お知らせ</a></li>
+															<li><a href="">採用情報</a></li>
+															<li><a href="">よくあるご質問</a></li>
+															<li><a href="">交通アクセス</a></li>
+														</ul>
+													</div>
+													<ul class="l-header__subitem__list">
+														<li>
+															<a href="">
+																<strong>01</strong>
+																<span>診療のご案内</span>
+															</a>
+														</li> 
+														<li>
+															<a href="">
+																<strong>02</strong>
+																<span>産科</span>
+															</a>
+														</li> 
+														<li>
+															<a href="">
+																<strong>03</strong>
+																<span>婦人科</span>
+															</a>
+														</li> 
+														<li>
+															<a href="">
+																<strong>04</strong>
+																<span>女性泌尿器科</span>
+															</a>
+														</li> 
+													</ul>
+												</div>
+											</div>
+											<div class="l-header__subitem__btn">
+												<span>閉じる</span>
+											</div>
+										</div>
+									</li>
+									<li class="l-header__item --subitem --birth">
+										<a href="">
+											<span>ご出産について</span>
+										</a>
+										<div class="l-header__subitem">
+											<div class="l-header__subitem__inner">
+												<div class="l-header__subitem__contents">
+													<div class="l-header__subitem__head">
+														<div class="c-heading1 --size1 --color4">
+															<strong>Birth</strong>
+															<span>ご出産について</span>
+														</div>
+														<ul>
+															<li><a href="">お知らせ</a></li>
+															<li><a href="">採用情報</a></li>
+															<li><a href="">よくあるご質問</a></li>
+															<li><a href="">交通アクセス</a></li>
+														</ul>
+													</div>
+													<ul class="l-header__subitem__list">
+														<li>
+															<a href="">
+																<strong>01</strong>
+																<span>分娩について</span>
+															</a>
+														</li> 
+														<li>
+															<a href="">
+																<strong>02</strong>
+																<span>帝王切開について</span>
+															</a>
+														</li> 
+														<li>
+															<a href="">
+																<strong>03</strong>
+																<span>帝王切開について</span>
+															</a>
+														</li> 
+														<li>
+															<a href="">
+																<strong>04</strong>
+																<span>里帰り出産</span>
+															</a>
+														</li> 
+													</ul>
+												</div>
+											</div>
+											<div class="l-header__subitem__btn">
+												<span>閉じる</span>
+											</div>
+										</div>
+									</li>
+									<li class="l-header__item --subitem --stay">
+										<a href="">
+											<span>入院のご案内</span>
+										</a>
+										<div class="l-header__subitem">
+											<div class="l-header__subitem__inner">
+												<div class="l-header__subitem__contents">
+													<div class="l-header__subitem__head">
+														<div class="c-heading1 --size1 --color4">
+															<strong>Stay</strong>
+															<span>入院のご案内</span>
+														</div>
+														<ul>
+															<li><a href="">お知らせ</a></li>
+															<li><a href="">採用情報</a></li>
+															<li><a href="">よくあるご質問</a></li>
+															<li><a href="">交通アクセス</a></li>
+														</ul>
+													</div>
+													<ul class="l-header__subitem__list">
+														<li>
+															<a href="">
+																<strong>01</strong>
+																<span>入院までの準備</span>
+															</a>
+														</li> 
+														<li>
+															<a href="">
+																<strong>02</strong>
+																<span>入院中の生活</span>
+															</a>
+														</li> 
+														<li>
+															<a href="">
+																<strong>03</strong>
+																<span>お食事について</span>
+															</a>
+														</li> 
+														<li>
+															<a href="">
+																<strong>04</strong>
+																<span>入院居室のご案内</span>
+															</a>
+														</li> 
+														<li>
+															<a href="">
+																<strong>05</strong>
+																<span>スリーピングニューボンフォト</span>
+															</a>
+														</li> 
+													</ul>
+												</div>
+											</div>
+											<div class="l-header__subitem__btn">
+												<span>閉じる</span>
+											</div>
+										</div>
+									</li>
+									<li class="l-header__item --subitem --care">
+										<a href="">
+											<span>ケアサポート</span>
+										</a>
+										<div class="l-header__subitem">
+											<div class="l-header__subitem__inner">
+												<div class="l-header__subitem__contents">
+													<div class="l-header__subitem__head">
+														<div class="c-heading1 --size1 --color4">
+															<strong>Care＆Support</strong>
+															<span>ケアサポート</span>
+														</div>
+														<ul>
+															<li><a href="">お知らせ</a></li>
+															<li><a href="">採用情報</a></li>
+															<li><a href="">よくあるご質問</a></li>
+															<li><a href="">交通アクセス</a></li>
+														</ul>
+													</div>
+													<ul class="l-header__subitem__list">
+														<li>
+															<a href="">
+																<strong>01</strong>
+																<span>産前ケアサポート</span>
+															</a>
+														</li> 
+														<li>
+															<a href="">
+																<strong>02</strong>
+																<span>産前ケアサポート</span>
+															</a>
+														</li> 
+													</ul>
+												</div>
+											</div>
+											<div class="l-header__subitem__btn">
+												<span>閉じる</span>
+											</div>
+										</div>
+									</li>
+								</ul>
+								<div class="l-header__info u-only__wideSp">
+									<div class="c-button2">
+										<a href="" target="_blank" class="c-button2__link"><span>初診・再診のご予約</span></a>
+									</div>
+									<div class="contact">
+										<span class="ttl">お問い合わせ・ご相談</span>
+										<div class="c-tel">
+											<span class="c-tel__lable">Tel.</span>
+											<a href="tel:0942322502" class="c-tel__link u-hoverOpacity">0942-32-2502</a>
+										</div>
+										<span class="time">受付時間 9:00 - 17:30</span>
+									</div>
+								</div>
+								<ul class="l-header__subNav u-only__wideSp">
+									<li class="l-header__subNav__item --sns">
+										<a href="https://www.facebook.com/kawata.clinic/"><img src="<%= getRelativePath('/images/face_icon.png'); %>" alt="facebook" width=""></a>
+										<a href="https://www.instagram.com/kawatasanfujinka/"><img src="<%= getRelativePath('/images/ins_icon.png'); %>" alt="instagram" width=""></a>
+									</li>
+								</ul>
+								<div class="l-header__btnClose u-only__wideSp">
+									<span>閉じる</span>
+								</div>
+							</div>
+						</div> 
+					</nav>
+					<div class="l-menu__button">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+					<div class="l-header__circle"></div>
+				</div>
+			</div> 
+		</header>
+		<!-- /#header -->  
+		<div class="l-content">
+			<main id="l-primary"><% if (getPageId() == 'index') { %>
+				<div class="c-mainvisual">
+					<div class="c-mainvisual__bg" >
+						<video autoplay muted loop>
+							<source src="" type="">
+						</video>
+					</div>
+					<div class="c-mainvisual__catch">
+						<div class="c-mainvisual__txt1">
+							患者さまの“自分らしさ”に寄り添い、<br>
+							全力でサポートいたします。
+						</div>
+						<div class="c-mainvisual__txt2">
+							<img src="<%= getRelativePath('/images/index/mainvisual_txt01.png'); %>" alt="be yourself" width="488">
+						</div>
+						<div class="c-mainvisual__notice">
+							<a href="">
+								<strong>重要なお知らせ</strong>
+								<span>年末年始の診療に関する医師スケジュールを更新いたしました。（2022.12.08更新）</span>
+							</a>
+						</div>
+					</div>
+					<div class="c-mainvisual__scroll">
+						<span>SCROLL DOWN</span>
+					</div>
+				</div><% } else { %>
+				<div class="c-pagetitle">
+					<h2 class="c-pagetitle__heading"><% if (_.indexOf(_.keys(config.categories), config.page.category) !== -1) { %>
+						<strong><%- getEachPageTitle(); %></strong>
+						<% } %>
+					</h2>
+					<% if (getPageId() == 'temp' ) { %>
+						<div class="c-pagetitle__nav">
+							<div class="c-pagetitle__navTitle js-pagetitleNav">
+								<div class="ttl">
+									<strong>当院について</strong>
+									<span>About us</span>
+								</div>
+							</div>
+							<div class="c-pagetitle__navCont">
+								<div class="l-inner --wide">
+									<ul class="c-pagetitle__navList">
+										<li class="c-pagetitle__navItem --greet"><a href="javascript:;"><em>01</em><span>ごあいさつ</span></a></li>
+										<li class="c-pagetitle__navItem --staff"><a href="javascript:;"><em>02</em><span>医師・スタッフ紹介</span></a></li>
+										<li class="c-pagetitle__navItem --hospital"><a href="javascript:;"><em>03</em><span>院内紹介</span></a></li>
+										<li class="c-pagetitle__navItem --recruiment"><a href="javascript:;"><em>04</em><span>採用情報</span></a></li>
+										<li class="c-pagetitle__navItem --privacy"><a href="javascript:;"><em>05</em><span>個人情報保護方針</span></a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					<% } %>
+				</div>
+				<% } %>
+				<%- include('_breadline'); %>
+				<article class="<%= getArticleClass(); %>">

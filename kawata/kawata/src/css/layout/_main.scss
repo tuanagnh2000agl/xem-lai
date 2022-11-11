@@ -1,0 +1,34 @@
+.l-inner {
+	margin: 0 auto;
+	padding: 0 $pd-x-pc;
+	width: $content-width + 2*$pd-x-pc;
+	max-width: 100%;
+	height: inherit;
+
+	&.--wide {
+		width:  $content-width--wide + 2*$pd-x-pc;
+	}
+
+	&.--narrow {
+		width:  $content-width--narrow + 2*$pd-x-pc;
+	}
+}
+
+.l-content {
+	padding-top: 150px;
+}
+// Tablet + Phone
+// --------------------------------------------------
+@include media-breakpoint-tab-sp {
+	.l-content {
+		padding-top: 90px;
+	}
+}
+// Phone
+// --------------------------------------------------
+@include media-breakpoint-sp {
+	.l-inner {
+		padding: 0 $pd-x-sp;
+	}
+	
+}

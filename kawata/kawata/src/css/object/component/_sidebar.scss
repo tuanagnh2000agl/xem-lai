@@ -1,0 +1,109 @@
+.c-side {
+    position: fixed;
+    right: 0;
+    top: 150px;
+    width: 64px;
+    z-index: 5;
+    &__btn {
+        writing-mode: tb;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(180deg, #0c7cad, #10c4aa);
+        font-weight: 700;
+        font-size: (18px / $font-size) * 1rem;
+        font-family:$font-family-gothic;
+        color: #fff;
+        letter-spacing: 0.05em;
+        padding: 34px 5px 24px;
+        border-radius: 10px 0 0 10px;
+        overflow: hidden;
+        &:after {
+            content: "";
+            width: 44px;
+            height: 44px;
+            background: url(images/logo_sidebar.png) no-repeat center / contain;
+            margin-top: 20px;
+        }
+    }
+    &__btn2 {
+        display: none;
+    }
+}
+
+//Phone
+// --------------------------------------------------
+@include media-breakpoint-sp {
+    .c-side {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transform: translateY(100px);
+        left: 10px;
+        right: 10px;
+        width: auto;
+        border-radius: 10px 10px 0 0;
+        overflow: hidden;
+        bottom: 0;
+        height: 64px;
+        top: auto;
+        background: linear-gradient(to right,#10c4aa ,#0c7cad );
+        display: flex;
+        align-items: stretch;
+        transition: all ease-in 0.5s;
+        &.is-show {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+            transform: none;
+        }
+        &__btn {
+            writing-mode: lr;
+            flex-direction: row-reverse;
+            padding: 0 10px 0 0;
+            align-items: center;
+            font-size: (16px / $font-size) * 1rem;
+            background: none;
+            letter-spacing: 0;
+            &:after {
+                margin-top: 0;
+                width: 37px;
+                height: 37px;
+                margin-right: 9px;
+            }
+        }
+
+        &__btn2 {
+            color: #fff;
+            font-size: (10px / $font-size) * 1rem;
+            font-weight: 700;
+            font-family: $font-family-gothic;
+            flex-shrink: 0;
+            width: 18.82%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding-top: 4px;
+            border-left: 1px solid rgba(255,255,255,0.5);
+            &:before {
+                content: "";
+                width: 23px;
+                height: 24px;
+                margin-bottom: 1px;
+            }
+            &.--calendar {
+                &:before {
+                    background: url(images/icon_calendarW.png) no-repeat center / 23px auto;
+                }
+            }
+            &.--phone {
+                &:before {
+                    background: url(images/icon_phoneW.png) no-repeat center / 9px auto;
+                }
+            }
+        }
+    }
+    
+}

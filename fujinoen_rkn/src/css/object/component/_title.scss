@@ -1,0 +1,67 @@
+.c-heading1{
+    font-size: ( 30px / $font-size) * 1rem;
+    font-family: $font-family-mincho;
+    font-weight: bold;
+    color: $blue;
+    position: relative;
+    padding-bottom: .25em;
+    line-height: 1.4;
+    span{
+        display: block;
+        font-size: ( 16px / $font-size) * 1rem;
+        color: #000;
+    }
+    &::after{
+        content: "";
+        position: absolute;
+        width: 42px;
+        height: 4px;
+        background: url(./images/common/h2_after.png) no-repeat center;
+        background-size: contain;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    &.--fs1{
+        font-size: ( 20px / $font-size) * 1rem;
+    }
+    &.--fs2{
+        font-size: ( 24px / $font-size) * 1rem;
+    }
+    &.--fs3{
+        font-size: ( 16px / $font-size) * 1rem;
+    }
+    &.--fs4{
+        font-size: ( 18px / $font-size) * 1rem;
+    }
+    &.--bold{
+        font-weight: bold;
+    }
+    &.--center{
+        text-align: center;
+    }
+    &.--mb2{
+        margin-bottom: 2em;
+    }
+}
+.c-heading2{
+    font-size: ( 24px / $font-size) * 1rem;
+    font-family: $font-family-mincho;
+    font-weight: bold;
+    color: #333;
+    &.--my1{
+        margin: 1em auto;
+    }
+}
+.c-heading3{
+    font-size: ( 30px / $font-size) * 1rem;
+    font-family: $font-family-mincho;
+    font-weight: bold;
+    color: #333;
+}
+.c-heading4{
+    font-size: ( 20px / $font-size) * 1rem;
+    font-family: $font-family-mincho;
+    font-weight: bold;
+    color: #333;
+}

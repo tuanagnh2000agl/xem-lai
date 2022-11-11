@@ -1,0 +1,52 @@
+.p-temp {
+    padding-top: 143px;
+    &__link {
+        display: flex;
+        align-items: center;
+        &Col {
+            &:nth-child(1) {
+                width: 60.42%;
+            }
+           
+        }
+    }
+    &__list {
+        margin: 0 10px;
+        display: flex;
+        flex-wrap: wrap;
+        &Col {
+            &.--w1 {
+                width: 50%;
+            }
+        }
+    }
+}
+//Phone
+// --------------------------------------------------
+@include media-breakpoint-sp {
+    .p-temp {
+        padding-top: 60px;
+        &__link {
+            display: block;
+            &Col {
+                &:nth-child(1) {
+                    width: 100%;
+                }
+                & + .p-temp__linkCol {
+                    margin-top: 55px;
+                }
+            }
+        }
+        &__list {
+            margin: 0;
+            &Col {
+                &.--w1 {
+                    width: 100%;
+                    + .p-temp__listCol.--w1 {
+                        margin-top: 50px;
+                    }
+                }
+            }
+        }
+    }
+}

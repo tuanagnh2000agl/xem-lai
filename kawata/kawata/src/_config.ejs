@@ -1,0 +1,128 @@
+<%
+	// 設定
+	config = _.merge({
+		relativePath: '',
+		site: {
+			title: 'template',
+			url: 'https://template.jp'
+		},
+		categories: {
+			news: {
+				url: '/news/',
+				title: 'お知らせ',
+			},
+		},
+		page: {
+			category: '',
+			id: '',
+			title: '',
+			titleen: '',
+			titlehtml: '',
+			description: '',
+			type: '',
+			breadline: []
+		}
+	}, extend);
+	// サイトタイトル
+	getSiteTitle = function() {
+		return config.site.title;
+	};
+	// サイトURL
+	getSiteUrl = function() {
+		return config.site.url;
+	};
+	// ヘッダページタイトル
+	getHeadPageTitle = function() {
+		var result = [],
+			categories = config.categories;
+		result.push(config.site.title);
+		if (config.page.category) {
+			var paths = config.page.category.split('/');
+			paths.forEach(function(id) {
+				if (categories) {
+					if (id in categories) {
+						result.push(categories[id].title);
+						categories = categories[id].children;
+					}
+				}
+			});
+		}
+		if (config.page.title && config.page.id != 'index' && config.page.id != 'confirm' && config.page.id != 'complate') {
+			result.push(config.page.title);
+		}
+		return result.reverse().join(' | ');
+	};
+	getEachPageTitle = function() {
+		if (config.page.titlehtml == "") {
+			return config.page.title;
+		} else {
+			return config.page.titlehtml;
+		}
+		
+	}
+	// ディスクリプション
+	getDescription = function() {
+		return config.page.description;
+	};
+	// ページID
+	getPageId = function() {
+		var result = '',
+			categories = config.categories;
+		if (config.page.category) {
+			var paths = config.page.category.split('/');
+			paths.forEach(function(id) {
+				if (categories) {
+					if (id in categories) {
+						result += id + '_';
+						categories = categories[id].children;
+					}
+				}
+			});
+		}
+		return result + config.page.id;
+	};
+	// ページタイトル
+	getPageTitle = function() {
+		return (getPageId() != 'index' ? config.page.title : config.site.title);
+	};
+	// ページURL
+	getPageUrl = function() {
+		return config.site.url + (getPageId() != 'index' ? (config.page.category ? '/' + config.page.category : '') + '/' + (config.page.id != 'index' ? config.page.id + '.html' : '') : '/');
+	};
+	// Bodyクラス
+	getBodyClass = function(prefix) {
+		var result = [],
+			categories = config.categories,
+			parent = '';
+		prefix = (typeof prefix !== 'undefined' ? prefix : '');
+		if (config.page.category) {
+			var paths = config.page.category.split('/');
+			paths.forEach(function(id) {
+				if (categories) {
+					if (id in categories) {
+						result.push(parent + id);
+						parent += id + '_';
+						categories = categories[id].children;
+					}
+				}
+			});
+		}
+		result.push(parent + config.page.id);
+		if (config.page.classes) {
+			result.push(config.page.classes);
+		}
+		return result.join(prefix != '' ? prefix : ' ');
+	};
+	// Articleクラス
+	getArticleClass = function(prefix) {
+		return getBodyClass(prefix);
+	};
+	// 相対パス
+	getRelativePath = function(path) {
+		return config.relativePath + path;
+	};
+	// wp画像パス
+	getCmsPath = function(path) {
+		return config.relativePath + "/cms/wp-content/uploads" + path;
+	};
+%>

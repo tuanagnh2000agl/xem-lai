@@ -1,0 +1,85 @@
+.l-inner {
+	margin: 0 auto;
+	padding: 0 $pd-x-pc;
+	width: $content-width;
+	max-width: 100%;
+	height: inherit;
+
+	&.--full {
+		width: 100%;
+		padding: 0;
+	}
+	//1790
+	&.--wide {
+		width:  $content-width--wide;
+	}
+	// 1140px
+	&.--narrow{
+		width:  $content-width--narrow;
+	}
+	//840
+	&.--small{
+		width:  $content-width--small;
+	}
+}
+
+.l-content {
+	padding-top: 120px;
+}
+
+.l-bg{
+	position: relative;
+	padding: 5em 0;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-image: url(./images/common/bg.jpg);
+	&::before{
+		content: "";
+		width: 100%;
+		height: 6.25vw;
+		background: url(./images/common/bg_top.png) ;
+		background-size: contain;
+		background-repeat: no-repeat;
+		position: absolute;
+		top: 0;
+	}
+	&::after{
+		content: "";
+		width: 100%;
+		height: 6.25vw;
+		background: url(./images/common/bg_bottom.png) ;
+		background-size: contain;
+		background-repeat: no-repeat;
+		position: absolute;
+		bottom: -3px;
+	}
+}
+
+
+
+// Tablet + Phone
+// --------------------------------------------------
+@include media-breakpoint-tab-sp {
+	.l-content {
+		padding-top: 80px;
+	}
+	.l-bg{
+		margin: 4em auto;
+		padding: 3em 0;
+		&::before{
+			background-size: cover;
+			background-position: top center;
+		}
+		&::after{
+			background-size: cover;
+			background-position: bottom center;
+		}
+	}
+}
+
+@include media-breakpoint-sp{
+	.l-content {
+		padding-top: 80px;
+	}
+}
+

@@ -1,0 +1,35 @@
+<% if (getPageId() != 'index') { %>
+    <div class="c-breadline">
+            <ul class="c-breadline__list">
+                <li class="c-breadline__item --home"><a href="<%= getRelativePath('/'); %>">HOME</a><span class="c-breadline__divider">&gt;</span></li>
+<% if (config.page.category) {
+var categories = config.categories,
+paths = config.page.category.split('/'),
+path = '';
+paths.forEach(function(id) {
+if (categories && id in categories) {
+path += (path ? '/' : '') + id;
+    if (config.page.category != path) {
+        config.page.breadline.forEach(function(breadline) { %>			
+                <li><a href="<%= getRelativePath(breadline.url) %>"><%= breadline.title %></a><span class="c-breadline__divider">&gt;</span></li><% }); }
+    if (config.page.id != 'index' || config.page.category != path) {
+    if ( categories[id].index == '0') { %> 			
+                <li class="c-breadline__item"><span><%= categories[id].title %></span><span class="c-breadline__divider">&gt;</span></li>
+    <% } else if (config.page.id == 'confirm' || config.page.id == 'complete') { %>	
+                <li class="c-breadline__item"><a href="<%= getRelativePath(categories[id].url) %>"><%= categories[id].title %></a></li>
+    <% } else { %>
+                <li class="c-breadline__item"><a href="<%= getRelativePath(categories[id].url) %>"><%= categories[id].title %></a><span class="c-breadline__divider">&gt;</span></li>				
+    <% } }
+categories = categories[id].children; 
+}}); } %>		
+    <% if ( config.page.id == 'temp') { %>
+                <li class="c-breadline__item"><a href="">当院について</a><span class="c-breadline__divider">&gt;</span></li>
+                <li class="c-breadline__item"><a href="">医師・スタッフ紹介</a><span class="c-breadline__divider">&gt;</span></li>
+    <% } %>
+    <% if ( config.page.id == 'confirm' || config.page.id == 'complete') { %>
+                <li class="c-breadline__item"><a href="">当院について</a></li>
+    <% } else { %>
+                <li class="c-breadline__item --active"><span><%= config.page.title %></span></li><% } %>
+            </ul>
+    </div>
+    <!-- /#breadline --><% } %>

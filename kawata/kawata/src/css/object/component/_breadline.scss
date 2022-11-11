@@ -1,0 +1,55 @@
+/* breadline */ 
+
+.c-breadline {
+    margin: 0;
+    background: #edf6f9;
+    text-align: right;
+    font-size: (12px / $font-size) * 1rem;
+    letter-spacing: 0.05em;
+    padding: 7px 14px;
+    position: relative;
+    &__item {
+        display: inline-block;
+        a {
+            transition: 0.3s all;
+            color: #002e42;
+            text-decoration: underline;
+            padding: 5px 0;
+            display: inline-block;
+            &:hover{
+                opacity: 0.7;
+            }
+        }
+        &.--active {
+            color: #002e42;
+        }
+    }
+    &__divider {
+        margin: 0 8px 0 14px;
+        display: inline-block;
+    }
+}
+
+
+// Desktop + Tablet
+// --------------------------------------------------
+@include media-breakpoint-pc-tab {
+    .c-breadline {
+        &__item {
+            a {
+                transition: 0.3s all;
+                &:hover{
+                    opacity: 0.7;
+                }
+            }
+        }
+    }
+}
+
+//Phone
+// --------------------------------------------------
+@include media-breakpoint-sp {
+    .c-breadline {
+        display: none;
+    }
+}

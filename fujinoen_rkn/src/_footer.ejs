@@ -1,0 +1,89 @@
+				</article>
+				<!-- /.<%= getArticleClass('.'); %> -->
+			</main>
+			<!-- /#primary -->
+		</div>
+		<!-- /#content -->
+		<footer class="l-footer"  id="is-footer">
+			<div class="c-pagetop" id="is-backtop">
+				<a href="<%= getRelativePath('/'); %>" class="u-only__pc booking" >
+					<img src="<%= getRelativePath('/images/common/icon_booking_blue.png'); %>" alt="予約方法">
+					<span>予約方法</span>
+				</a>
+				<a href="#" class="pagetop" id="pagetop">
+					<img src="<%= getRelativePath('/images/common/icon_arrow_top.png'); %>" alt="pagetop">
+					<span class="u-only__pc">上に戻る</span>
+				</a>
+			</div>
+			<div class="c-aside u-only__sp" id="is-tabbar">
+				<a class="c-aside__link --tel" href="tel:0925514126">
+					<img src="<%= getRelativePath('/images/common/icon_tel.png'); %>" alt="0925514126">電話
+				</a>
+				<a class="c-aside__link --booking" href="<%= getRelativePath('/'); %>">
+					<img src="<%= getRelativePath('/images/common/icon_booking.png'); %>" alt="予約方法">予約方法
+				</a>
+				<a class="c-aside__link --access" href="<%= getRelativePath('/'); %>">
+					<img src="<%= getRelativePath('/images/common/icon_access.png'); %>" alt="アクセス">アクセス
+				</a>
+			</div>
+			<div class="l-footer__contain">
+				<div class="l-footer__logo">
+					<a href="<%= getRelativePath('/'); %>"><img src="<%= getRelativePath('/images/common/logo_wh.png'); %>" alt="富士の苑"></a>
+				</div>
+				<p class="contact_txt">お問い合わせはこちらから</p>
+				<div class="l-footer__contact">
+					<a href="tel:0925514126" class="c-btnContact --tel --white"><span>(092)551-4126</span></a>
+					<a href="mailto:&#105;&#110;&#102;&#111;&#64;&#102;&#117;&#106;&#105;&#110;&#111;&#101;&#110;&#46;&#99;&#111;&#46;&#106;&#112;" target="_blank" class="c-btnContact --mail --white"><span>お問い合わせ</span></a>
+				</div>
+				<div class="l-footer__info">
+					<address class="l-footer__infoContact">
+						〒811-1344 <br class="u-only__sp">福岡県福岡市南区三宅3丁目19番7号<br>
+						<span class="c-text1 --bold">営業時間</span> | 10：00～22：00（21:30受付終了）<br>
+						<span class="c-text1 --bold">定休日</span> | 毎週火曜日 <br class="u-only__sp">（16時～22時までは温泉入浴のみ営業）<br>
+						<span class="c-text1 --bold">TEL</span> | <a href="tel:0925514126">(092)551-4126</a> <br>
+						<span class="c-text1 --bold">FAX</span> | (092)551-8445</a> <br>
+						<span class="c-text1 --bold">E-MAIL</span> | <a href="mailto:&#105;&#110;&#102;&#111;&#64;&#102;&#117;&#106;&#105;&#110;&#111;&#101;&#110;&#46;&#99;&#111;&#46;&#106;&#112;" target="_blank">&#105;&#110;&#102;&#111;&#64;&#102;&#117;&#106;&#105;&#110;&#111;&#101;&#110;&#46;&#99;&#111;&#46;&#106;&#112;</a>
+					</address>
+					<div class="l-footer__infoMenu">
+						<ul>
+							<li><a href="<%= getRelativePath('/'); %>">HOME</a></li>
+							<li><a href="<%= getRelativePath('/news/'); %>">お知らせ</a></li>
+							<li><a href="<%= getRelativePath('/facility/'); %>">施設案内</a></li>
+							<li><a href="<%= getRelativePath('/lodging/'); %>">宿泊</a></li>
+							<li><a href="<%= getRelativePath('/onsen/'); %>">温泉</a></li>
+							<li><a href="<%= getRelativePath('/meal/'); %>">お食事</a></li>
+							<li><a href="<%= getRelativePath('/sightseeing/'); %>">周辺観光</a></li>
+							<li><a href="<%= getRelativePath('/access/'); %>">アクセス</a></li>
+							<li class="wide1"><a href="mailto:&#105;&#110;&#102;&#111;&#64;&#102;&#117;&#106;&#105;&#110;&#111;&#101;&#110;&#46;&#99;&#111;&#46;&#106;&#112;" target="_blank">お問い合わせ</a></li>
+							<li class="wide2"><a href="<%= getRelativePath('/'); %>">個人情報保護方針</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="l-footer__coppy u-center">
+					© FUJINOEN All Rights Reserved
+				</div>
+			</div>
+		</footer>
+		<!-- /#footer -->
+	</div>
+	<!-- /#all -->
+
+	<script src="<%= getRelativePath('/js/jquery-3.6.0.min.js'); %>"></script>
+	<script src="<%= getRelativePath('/js/script.js'); %>"></script>
+	<% if(getPageId() == 'index') { %>
+		<script src="<%= getRelativePath('/js/slick.min.js'); %>"></script>
+		<script src="<%= getRelativePath('/js/index.js'); %>"></script>
+	<% } %>
+	<!-- font -->
+	<script>
+	(function(d) {
+		var config = {
+		kitId: 'mxm7xbk',
+		scriptTimeout: 3000,
+		async: true
+		},
+		h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+	})(document);
+	</script>
+</body>
+</html>

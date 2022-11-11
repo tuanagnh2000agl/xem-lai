@@ -1,0 +1,47 @@
+.l-flex {
+    display: flex;
+    flex-wrap: wrap;
+    &.--center {
+        align-items: center;
+    }
+    &.--reverse {
+        flex-direction: row-reverse;
+    }
+    @for $var from 1 to 12 {
+        &__col.--col#{$var} {
+            width: calc( 100% / (12 / #{$var}));
+        }  
+    }
+}
+.l-frameBtn {
+    display: flex;
+    align-items: center;
+    background: #edf6f9;
+    padding: 46px 0 48px;
+    margin-bottom: 65px;
+    &__item {
+        width: 48%;
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+// Phone
+// --------------------------------------------------
+@include media-breakpoint-sp {
+    .l-flex {
+        &.--spmax {
+            .l-flex__col {
+                width: 100%;
+            }
+        }
+    }
+    .l-frameBtn {
+        flex-wrap: wrap;
+        &__item {
+            width: 100%;
+        }
+    }
+    
+}

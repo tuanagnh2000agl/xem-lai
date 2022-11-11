@@ -1,0 +1,126 @@
+/* pagination */ 
+
+.c-pagination {
+	padding: 3em 0;
+	&__list {
+		text-align: center;
+		font-size: 0;
+	}
+	&__item {
+		display: inline-block;
+		vertical-align: middle;
+		font-size: $font-size-normal;
+		font-family: $font-family-mincho;
+		> a,
+		> span {
+			position: relative;
+			display: inline-block;
+			vertical-align: middle;
+			margin: 4px;
+			padding: .5em 1em;
+			text-align: center;
+			line-height: 1.4;
+			border: 1px solid $blue;
+			border-radius: 50%;
+		}
+		> a {
+			color: $blue;
+			text-decoration: none;
+			background-color: #fff;
+		}
+		> span {
+			color: #fff;
+			font-weight: bold;
+			background-color: $blue;
+		}
+		&.--next {
+			a {
+				padding-right: 2em;
+				border-radius: 20px;
+				&::after {
+					position: absolute;
+					top: 50%;
+					right: 1em;
+					display: block;
+					content: "";
+					width: .5em;
+					height: .5em;
+					margin-top: -.25em;
+					border-top: 1px solid $blue;
+					border-right: 1px solid $blue;
+					transform: rotate(45deg);
+				}
+			}
+		}
+		&.--prev {
+			a {
+				padding-left: 2em;
+				border-radius: 20px;
+				&::before {
+					position: absolute;
+					top: 50%;
+					left: 1em;
+					display: block;
+					content: "";
+					width: .5em;
+					height: .5em;
+					margin-top: -.25em;
+					border-top: 1px solid $blue;
+					border-left: 1px solid $blue;
+					transform: rotate(-45deg);
+				}
+			}
+		}
+	}
+}
+
+
+// Tablet
+// --------------------------------------------------
+@include media-breakpoint-pc-tab {
+    .c-pagination {
+		a {
+			transition: 0.3s;
+			&:hover {
+				color: #fff;
+				background-color: $blue;
+			}
+		}
+		&__item {
+			&.--next {
+				a {
+					&::after {
+						transition: border-color 0.3s;
+					}
+					&:hover {
+						&::after {
+							border-color: #fff;
+						}
+					}
+				}
+			}
+			&.--prev {
+				a {
+					&::before {
+						transition: border-color 0.3s;
+					}
+					&:hover {
+						&::before {
+							border-color: #fff;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+// Phone
+// --------------------------------------------------
+@include media-breakpoint-sp {
+    .c-pagination {
+		margin-left: 0;
+		margin-right: 0;
+	}
+}

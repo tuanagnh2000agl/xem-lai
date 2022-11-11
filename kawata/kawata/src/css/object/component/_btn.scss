@@ -1,0 +1,196 @@
+/* btn */ 
+
+.c-button1 {
+    &__link {
+        font-size: (15px / $font-size) * 1rem;
+        font-weight: 700;
+        color: #004569;
+        padding-right: 114px;
+        position: relative;
+        &:after {
+            content: "";
+            width: 107px;
+            height: 107px;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            margin-top: -53px;
+            background: url(images/arrowR_icon.png) no-repeat center / 15px auto;
+        }
+        &:before {
+            content: "";
+            width: 107px;
+            height: 107px;
+            border: 1px solid #004569;
+            border-radius: 50%;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            margin-top: -53px;
+            transform: scale(0.68);
+            transition: all 0.8s;
+        }
+        
+    }
+    &.--right {
+        text-align: right;
+    }
+}
+
+.c-button2 {
+    text-align: center;
+    &__link {
+        width: 300px;
+        max-width: 100%;
+        border-radius: 12px;
+        display: inline-flex;
+        background: linear-gradient(to right, #10c4aa, #0c7cad);
+        font-weight: 700;
+        color: #fff;
+        align-items: center;
+        justify-content: center;
+        padding: 18px;
+        font-size: (18px / $font-size) * 1rem;
+        &:before {
+            content: "";
+            width: 54px;
+            height: 54px;
+            background: url(images/logo_sidebar.png) no-repeat center / contain;
+            margin-right: 16px;
+        }
+    }
+}
+.c-button3 {
+    &__link {
+        display: inline-flex;
+        width: 280px;
+        max-width: 100%;
+        font-size: (16px / $font-size) * 1rem;
+        font-weight: bold;
+        color: #004569;
+        text-align: center;
+        border-radius: 40px;
+        border: 1px solid #00927d;
+        height: 80px;
+        align-items: center;
+        justify-content: center;
+        background: #fff;
+        &.--pdf {
+            position: relative;
+            &:after {
+                content: "";
+                position: absolute;
+                width: 27px;
+                height: 13px;
+                background: url(images/icon_pdf.png) no-repeat center/contain;
+                right: 25px;
+                top: 50%;
+                margin-top: -6.5px;
+            }
+        }
+        &.--arrow {
+            position: relative;
+            &:after {
+                content: "";
+                width: 14px;
+                height: 13px;
+                background: url(images/arrowRLB2_icon.png) no-repeat center/contain;
+                top: 50%;
+                margin-top: -6.5px;
+                right: 36px;
+                position: absolute;
+            }
+        }
+        &.--color1 {
+            background: #00927d;
+            color: #fff;
+            &:after {
+                background: url(images/arrowRW_icon.png) no-repeat center/contain;
+            }
+        }
+    }
+}
+
+// Desktop
+// --------------------------------------------------
+@include media-breakpoint-pc {
+    .c-button1 {
+        &__link {
+            &:hover {
+                &:before {
+                    transform: scale(1);
+                    opacity: 0;
+                }
+            }
+        }
+    }
+    .c-button3 {
+        &__link {
+            transition: all 0.3s;
+            &:hover {
+                background: #09927c;
+                color: #fff;
+            }
+            &.--arrow {
+                &:hover {
+                    &:after {
+                        background: url(images/arrowRW_icon.png) no-repeat center/contain;
+                    }
+                    &.--color1 {
+                        &:after {
+                            background: url(images/arrowRLB_icon.png) no-repeat center/contain;
+                        }
+                    }
+                }
+                
+            }
+            &.--color1 {
+                &:hover {
+                    background: #fff;
+                    color: #004569;
+                }
+            }
+        }
+    }
+}
+// Desktop + Tablet
+// --------------------------------------------------
+@include media-breakpoint-pc-tab {
+    .c-button {
+        &__link {
+            transition: 0.3s all;
+            &:hover{
+                opacity: 0.7;
+            }
+        }
+    }
+}
+
+//Phone
+// --------------------------------------------------
+@include media-breakpoint-sp {
+    .c-button1 {
+        &__link {
+            font-size: (14px / $font-size) * 1rem;
+            padding-right: 62px;
+            &:after {
+                width: 50px;
+                height: 50px;
+                margin-top: -25px;
+                background-size: 12px auto;
+                background-image:url(images/arrowR_icon_sp.png)
+            }
+            &:before {
+                width: 50px;
+                height: 50px;
+                margin-top: -25px;
+                transform: none;
+            }
+        }
+    }
+    .c-button3 {
+        &__link {
+            height: 60px;
+        }
+    }
+}

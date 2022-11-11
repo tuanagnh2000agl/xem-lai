@@ -1,0 +1,123 @@
+/* pagination */ 
+
+.c-pagination {
+	// padding-top: 3em;
+	&__list {
+		text-align: center;
+		font-size: 0;
+	}
+	&__item {
+		display: inline-block;
+		vertical-align: middle;
+		font-size: $font-size-normal;
+		> a,
+		> span {
+			position: relative;
+			display: inline-block;
+			vertical-align: middle;
+			margin: 4px;
+			padding: .5em 1em;
+			font-size: $font-size-small;
+			text-align: center;
+			line-height: 1.4;
+			border: 1px solid #000;
+		}
+		> a {
+			color: #000;
+			text-decoration: none;
+			background-color: #fff;
+		}
+		> span {
+			color: #fff;
+			font-weight: bold;
+			background-color: #000;
+		}
+		&.--next {
+			a {
+				padding-right: 2em;
+				&::after {
+					position: absolute;
+					top: 50%;
+					right: 1em;
+					display: block;
+					content: "";
+					width: .5em;
+					height: .5em;
+					margin-top: -.25em;
+					border-top: 1px solid #000;
+					border-right: 1px solid #000;
+					transform: rotate(45deg);
+				}
+			}
+		}
+		&.--prev {
+			a {
+				padding-left: 2em;
+				&::before {
+					position: absolute;
+					top: 50%;
+					left: 1em;
+					display: block;
+					content: "";
+					width: .5em;
+					height: .5em;
+					margin-top: -.25em;
+					border-top: 1px solid #000;
+					border-left: 1px solid #000;
+					transform: rotate(-45deg);
+				}
+			}
+		}
+	}
+}
+
+
+// Tablet
+// --------------------------------------------------
+@include media-breakpoint-pc-tab {
+    .c-pagination {
+		a {
+			transition: 0.3s;
+			&:hover {
+				color: #fff;
+				background-color: #000;
+			}
+		}
+		&__item {
+			&.--next {
+				a {
+					&::after {
+						transition: border-color 0.3s;
+					}
+					&:hover {
+						&::after {
+							border-color: #fff;
+						}
+					}
+				}
+			}
+			&.--prev {
+				a {
+					&::before {
+						transition: border-color 0.3s;
+					}
+					&:hover {
+						&::before {
+							border-color: #fff;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+// Phone
+// --------------------------------------------------
+@include media-breakpoint-sp {
+    .c-pagination {
+		margin-left: 0;
+		margin-right: 0;
+	}
+}

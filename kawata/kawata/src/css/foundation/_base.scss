@@ -1,0 +1,68 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	color: $font-color;
+	font-family: $font-family-mincho; 
+	font-weight: 400;
+	font-size: 1rem;
+	line-height: 1.75;
+	word-break: normal;
+	overflow-wrap: normal;
+	word-wrap: normal;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-size-adjust: 100%;
+}
+
+a {
+	color: #000;
+	outline: none;
+	word-break: break-all;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+ul, ol {
+	list-style: none;
+}
+
+img {
+	max-width: 100%;
+	vertical-align: middle;
+}
+
+select,
+textarea,
+input[type="text"],
+input[type="date"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="number"] {
+    width: 100%;
+    padding: 6px;
+	font-size: 16px;
+    background-color: #fff;
+	border: 1px solid #000;
+    border-radius: 8px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin: 0 4px 0 0;
+    cursor: pointer;
+}
+
+//Phone
+// --------------------------------------------------
+@include media-breakpoint-sp {
+	body {
+		font-size: (15px / $font-size) * 1rem;
+		line-height: 1.866;
+	}
+}

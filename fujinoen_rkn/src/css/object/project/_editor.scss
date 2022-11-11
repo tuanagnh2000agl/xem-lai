@@ -1,0 +1,134 @@
+/* editor */ 
+
+section {
+    &.p-editor{
+        margin-bottom: 5em;
+    }
+    .p-editor__content{
+        margin: 3em auto;
+        overflow: hidden;
+        @include clearfix;
+        h1{
+            font-size: (28px / $font-size) * 1rem;
+        }
+        h2{
+            font-size: (24px / $font-size) * 1rem;
+        }
+        h3{
+            font-size: (24px / $font-size) * 1rem;
+        }
+        h4{
+            font-size: (22px / $font-size) * 1rem;
+        }
+        h5{
+            font-size: (20px / $font-size) * 1rem;
+        }
+        h6{
+            font-size: (18px / $font-size) * 1rem;
+        }
+        p {
+            min-height: 1em * $line-height-base;
+        }
+        a{
+            text-decoration: underline;
+            &:hover{
+                text-decoration: none;
+            }
+        }
+        img {
+            height: auto !important;
+            &.aligncenter{
+                display: block;
+                margin: 0 auto;
+            }
+            &.alignright{
+                float: right;
+            }
+            &.alignleft{
+                float: left;
+            }
+        }
+        em {
+            font-style: italic;
+        }
+        blockquote{
+            position: relative;
+            background-color: #eeeeee;
+            padding: 1.5em 1.5em 1em;
+            margin: 1em auto;
+            &::before{
+                display: inline-block;
+                position: absolute;
+                top: 5px;
+                left: 10px;
+                content: "“";
+                font-size: (32px / $font-size) * 1rem;
+                color: #cfcfcf;
+                line-height: 1;
+            }
+        }
+        table {
+            margin: 2em auto;
+            background-color: #fff;
+            border-right: 1px solid #000;
+            border-bottom: 1px solid #000;
+            max-width: 100%;
+            th,
+            td {
+                padding: .25em;
+                border-left: 1px solid #000;
+                border-top: 1px solid #000;
+            }
+            th {
+                text-align: center;
+                font-weight: bold;
+                background-color: #000;
+            }
+            &.aligncenter{
+                margin: 0 auto;
+            }
+            &.alignright{
+                float: right;
+            }
+            &.alignleft{
+                float: left;
+            }
+        }
+        ul,
+        ol {
+            margin-left: 1.5em;
+            > li {
+                > ul,
+                > ol {
+                    margin-left: 1.25em;
+                }
+            }
+        }
+        ul{
+            list-style: circle;
+        }
+        ol{
+            list-style: decimal;
+        }
+        dl {
+            > dt {
+                font-weight: bold;
+            }
+            > dd {
+                margin-left: 1em;
+            }
+        }
+    }
+}
+
+// Phone
+// --------------------------------------------------
+@include media-breakpoint-sp {
+    section {
+        .p-editor__content{
+            table {
+                width:  100% !important;
+            }
+        }
+	}
+}

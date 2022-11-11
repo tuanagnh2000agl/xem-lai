@@ -1,0 +1,299 @@
+<%- include('_config', { extend: {
+	relativePath: '.',
+	page: {
+		id: 'index',
+		title: 'TOPページ',
+		description: 'TOPページです',
+	}
+}}); %><%- include('_header'); %>
+					<section class="p-top__news">
+						<div class="l-inner --wide">
+							<div class="p-top__news__inner">
+								<div class="p-top__news__cont">
+									<div class="p-top__news__side">
+										<h2 class="c-heading1 --size1 --color1">
+											<strong>News</strong>
+											<span>お知らせ</span>
+										</h2>
+										<div class="c-tag">
+											<ul class="c-tag__list --sp-col2">
+												<li class="c-tag__item is-active">
+													<a href=""><span>ALL</span></a>
+												</li>
+												<li class="c-tag__item">
+													<a href=""><span>＃インフォメーション</span></a>
+												</li>
+												<li class="c-tag__item">
+													<a href=""><span>＃医師スケジュール</span></a>
+												</li>
+												<li class="c-tag__item">
+													<a href=""><span>＃その他</span></a>
+												</li>
+											</ul>
+										</div>
+										<div class="c-button1">
+											<a href="" class="c-button1__link">
+												<span>もっと読む</span>
+											</a>
+										</div>
+									</div>
+									<div class="p-top__news__list">
+										<div class="c-news">
+											<ul class="c-news__list">
+												<li class="c-news__item --new">
+													<a href="">
+														<div class="c-news__day">2022/12/10</div>
+														<div class="c-news__cat">＃インフォメーション</div>
+														<div class="c-news__title">お支払い方法についてのお知らせ</div>
+													</a>
+												</li>
+												<li class="c-news__item">
+													<a href="">
+														<div class="c-news__day">2022/11/09</div>
+														<div class="c-news__cat">＃インフォメーション</div>
+														<div class="c-news__title">おうちでマタニティヨガ！Zoom配信について</div>
+													</a>
+												</li>
+												<li class="c-news__item">
+													<a href="">
+														<div class="c-news__day">2022/10/22</div>
+														<div class="c-news__cat">＃医師スケジュール</div>
+														<div class="c-news__title">大型連休中の医師スケジュール変更のお知らせ</div>
+													</a>
+												</li>
+												<li class="c-news__item">
+													<a href="">
+														<div class="c-news__day">2022/09/10</div>
+														<div class="c-news__cat">＃インフォメーション</div>
+														<div class="c-news__title">久留米市の子宮頸がん健診がスタートします</div>
+													</a>
+												</li>
+												<li class="c-news__item">
+													<a href="">
+														<div class="c-news__day">2022/08/18</div>
+														<div class="c-news__cat">＃その他</div>
+														<div class="c-news__title">看護師・助産師の正職員を若干名募集しております</div>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+					<section class="p-top__mamVoice">
+						<div class="l-inner --wide">
+							<div class="p-top__mamVoice__inner">
+								<div class="p-top__mamVoice__content">
+									<div class="text-img">
+										<img class="u-only__pc" src="<%= getRelativePath('/images/index/voice_txt01.png'); %>" alt="Special Contents" width="468">
+										<img class="u-only__sp" src="<%= getRelativePath('/images/index/voice_txt01_sp.png'); %>" alt="Special Contents" width="293">
+									</div>
+									<h2 class="c-heading1 --size2 --right --color2">
+										<strong>Mam’s Voice</strong>
+										<span>患者さまの声</span>
+									</h2>
+									<div class="content">
+										当院でご出産されたお母さまにアンケートをお願いしたコメントをご紹介しております。これからご出産を控える方やご家族の皆さまへご参考になれば幸いです。
+									</div>
+									<div class="c-button1 --right">
+										<a href="" class="c-button1__link"><span>もっと読む</span></a>
+									</div>
+								</div>
+								<div class="p-top__mamVoice__img" style="background-image:url(<%= getRelativePath('/images/index/voice_img01.jpg'); %>)"></div>
+							</div>
+						</div>
+					</section>
+					<section class="p-top__about">
+						<div class="l-inner --wide">
+							<div class="c-blockNav1">
+								<div class="c-blockNav1__img" style="background-image: url(<%= getRelativePath('/images/index/about_img01.jpg'); %>);"></div>
+								<div class="c-blockNav1__cont">
+									<div class="c-blockNav1__cont__inner">
+										<h2 class="c-heading1 --size1 --color3">
+											<strong>About us</strong>
+											<span>当院について</span>
+										</h2>
+										<ul class="c-nav1">
+											<li class="c-nav1__item">
+												<a href=""><strong>01</strong><span>ごあいさつ</span></a>
+											</li>
+											<li class="c-nav1__item">
+												<a href=""><strong>02</strong><span>医師・スタッフ紹介</span></a>
+											</li>
+											<li class="c-nav1__item">
+												<a href=""><strong>03</strong><span>院内紹介</span></a>
+											</li>
+											<li class="c-nav1__item">
+												<a href=""><strong>04</strong><span>採用情報</span></a>
+											</li>
+											<li class="c-nav1__item">
+												<a href=""><strong>05</strong><span>個人情報保護方針</span></a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+					<section class="p-top__service">
+						<div class="p-top__service__bg" style="background-image:url(<%= getRelativePath('/images/index/service_bg01.jpg'); %>)"></div>
+						<div class="p-top__service__wrap">
+							<div class="l-inner">
+								<div class="p-top__service__inner">
+									<div class="p-top__service__cont">
+										<h2 class="c-heading1 --size1 --color3">
+											<strong>Our service</strong>
+											<span>診療のご案内</span>
+										</h2>
+										<div class="p-top__service__list">
+											<div class="p-top__service__item">
+												<a href="">
+													<div class="img">
+														<img class="u-only__pc" src ="<%= getRelativePath('/images/index/service_img01.jpg'); %>" alt="診療のご案内"></img>
+														<img class="u-only__sp" src="<%= getRelativePath('/images/index/service_img01_sp.jpg'); %>" alt="診療のご案内"></img>
+													</div>
+													<div class="c-link1">
+														<div class="c-link1__inner"><span>診療のご案内</span></div>
+													</div>
+												</a>
+											</div>
+											<div class="p-top__service__item">
+												<a href="">
+													<div class="img">
+														<img class="u-only__pc" src ="<%= getRelativePath('/images/index/service_img02.jpg'); %>" alt="産科"></img>
+														<img class="u-only__sp" src="<%= getRelativePath('/images/index/service_img02_sp.jpg'); %>" alt="産科"></img>
+													</div>
+													<div class="c-link1">
+														<div class="c-link1__inner"><span>産科</span></div>
+													</div>
+												</a>
+											</div>
+											<div class="p-top__service__item">
+												<a href="">
+													<div class="img">
+														<img class="u-only__pc" src ="<%= getRelativePath('/images/index/service_img03.jpg'); %>" alt="婦人科"></img>
+														<img class="u-only__sp" src="<%= getRelativePath('/images/index/service_img03_sp.jpg'); %>" alt="婦人科"></img>
+													</div>
+													<div class="c-link1">
+														<div class="c-link1__inner"><span>婦人科</span></div>
+													</div>
+												</a>
+											</div>
+											<div class="p-top__service__item">
+												<a href="">
+													<div class="img">
+														<img class="u-only__pc" src ="<%= getRelativePath('/images/index/service_img04.jpg'); %>" alt="女性泌尿器科"></img>
+														<img class="u-only__sp" src="<%= getRelativePath('/images/index/service_img04_sp.jpg'); %>" alt="女性泌尿器科"></img>
+													</div>
+													<div class="c-link1">
+														<div class="c-link1__inner"><span>女性泌尿器科</span></div>
+													</div>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+					<section class="p-top__birth">
+						<div class="l-inner --wide">
+							<div class="c-blockNav1">
+								<div class="c-blockNav1__img" style="background-image: url(<%= getRelativePath('/images/index/birth_img01.jpg'); %>);"></div>
+								<div class="c-blockNav1__cont --layout1">
+									<div class="c-blockNav1__cont__inner">
+										<h2 class="c-heading1 --size3 --color3">
+											<strong>Birth</strong>
+											<span>ご出産について</span>
+										</h2>
+										<div class="desc">
+											出産についての選択は人それぞれです。<br>
+											私たちは患者さま一人ひとりのバースプランに寄り添い、安心してお産に集中できるようサポートいたします。
+										</div>
+										<ul class="c-nav1 --bold">
+											<li class="c-nav1__item">
+												<a href=""><strong>01</strong><span>分娩について</span></a>
+											</li>
+											<li class="c-nav1__item">
+												<a href=""><strong>02</strong><span>帝王切開について</span></a>
+											</li>
+											<li class="c-nav1__item">
+												<a href=""><strong>03</strong><span>里帰り出産</span></a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div> 
+						</div>
+					</section>
+					<section class="p-top__stay">
+						<div class="c-blockNav2">
+							<div class="l-inner">
+								<div class="c-blockNav2__inner">
+									<div class="c-blockNav2__cont">
+										<h2 class="c-heading1 --size1 --color3">
+											<strong>Stay</strong>
+											<span>入院のご案内</span>
+										</h2>
+										<ul class="c-nav1">
+											<li class="c-nav1__item">
+												<a href=""><strong>01</strong><span>入院までの準備</span></a>
+											</li>
+											<li class="c-nav1__item">
+												<a href=""><strong>02</strong><span>入院中の生活</span></a>
+											</li>
+											<li class="c-nav1__item">
+												<a href=""><strong>03</strong><span>お食事について</span></a>
+											</li>
+											<li class="c-nav1__item">
+												<a href=""><strong>04</strong><span>入院居室のご案内</span></a>
+											</li>
+											<li class="c-nav1__item">
+												<a href=""><strong>05</strong><span>スリーピングニューボンフォト</span></a>
+											</li>
+										</ul>
+									</div>
+									<div class="c-blockNav2__img" style="background-image: url(<%= getRelativePath('/images/index/stay_img01.jpg'); %>);"></div>
+								</div>
+							</div> 
+						</div>
+					</section>
+					<section class="p-top__care">
+						<div class="l-inner">
+							<div class="p-top__care__inner">
+								<h2 class="c-heading1 --size3 --color3">
+									<strong>Care＆Support</strong>
+									<span>ケアサポート</span>
+								</h2>
+								<div class="p-top__care__desc">
+									妊娠してから出産までの「産前サポート」<br>
+									出産後、ママと赤ちゃんのための「育児のケアサポート」
+								</div>
+								<div class="p-top__care__list">
+									<div class="p-top__care__item">
+										<a href="">
+											<div class="img">
+												<div style="background-image:url(<%= getRelativePath('/images/index/care_img01.jpg'); %>)"></div>
+											</div>
+											<div class="c-link1 --bold --color1">
+												<div class="c-link1__inner"><span>産前ケアサポート</span></div>
+											</div>
+										</a>
+									</div>
+									<div class="p-top__care__item">
+										<a href="">
+											<div class="img">
+												<div style="background-image:url(<%= getRelativePath('/images/index/care_img02.jpg'); %>)"></div>
+											</div>
+											<div class="c-link1 --bold --color1">
+												<div class="c-link1__inner"><span>産前ケアサポート</span></div>
+											</div>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+<%- include('_footer'); %>

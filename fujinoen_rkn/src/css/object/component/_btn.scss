@@ -1,0 +1,155 @@
+.c-btn{
+    background: $blue;
+    max-width: 335px;
+    width: 90%;
+    color: #fff;
+    font-weight: bold;
+    font-size: ( 18px / $font-size) * 1rem;
+    font-family: $font-family-mincho;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 10px 0;
+    cursor: pointer;
+    border-radius: 50px;
+    &::after{
+        transition: all 0.2s linear;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 1.5em;
+        display: inline-block;
+        vertical-align: middle;
+        content: "";
+        width: 24px;
+        height: 8px;
+        position: absolute;
+        background: transparent url(./images/common/icon_arrow.png) no-repeat center center;
+        background-size: contain;
+    }
+    &.--white{
+        color: $blue;
+        background: #fff;
+        position: unset;
+        transition: all 0.2s linear;
+        img{
+            position: unset;
+            width: 23px;
+            height: 23px;
+            margin-right: 10px;
+            &:last-child{
+                width: 32px;
+            }
+        }
+        &.c-btn__size{
+            img{
+                height: 23px;
+                width: 32px;
+            }
+        }
+    }
+}
+
+.c-btnContact{
+    background: $blue;
+    max-width: 335px;
+    width: 90%;
+    color: #fff;
+    font-weight: bold;
+    font-size: ( 18px / $font-size) * 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 10px ;
+    cursor: pointer;
+    border-radius: 50px;
+    span{
+        position: relative;
+        padding-left: 30px;
+        font-family: $font-family-mincho;
+    }
+    &.--tel{
+        span{
+            &::after{
+                top: 50%;
+                transform: translateY(-50%);
+                left: 0;
+                display: inline-block;
+                vertical-align: middle;
+                content: "";
+                width: 24px;
+                height: 24px;
+                position: absolute;
+                background: transparent url(./images/common/icon_tel.png) no-repeat center center;
+                background-size: contain;
+            }
+        }
+    }
+    &.--mail{
+        span{
+            &::after{
+                top: 50%;
+                transform: translateY(-50%);
+                left: 0;
+                display: inline-block;
+                vertical-align: middle;
+                content: "";
+                width: 24px;
+                height: 24px;
+                position: absolute;
+                background: transparent url(./images/common/icon_mail.png) no-repeat center center;
+                background-size: contain;
+            }
+        }
+    }
+    &.--white{
+        color: $blue;
+        background: #fff;
+        &.--tel{
+            span{
+                &::after{
+                    background: transparent url(./images/common/icon_tel_blue.png) no-repeat center center;
+                    background-size: contain;
+                }
+            }
+        }
+        &.--mail{
+            span{
+                &::after{
+                    background: transparent url(./images/common/icon_mail_blue.png) no-repeat center center;
+                    background-size: contain;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+@include media-breakpoint-pc-tab{
+    .c-btn{
+        &:hover{
+            &::after{
+                right: 1.25em;
+            }
+        }
+        &.--white{
+            &:hover{
+                opacity: 0.7;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-sp {
+    .c-btn{
+        width: 100%;
+        padding: 15px 0;
+        img{
+            right: 15%;
+        }
+    }
+}

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<title><%= getHeadPageTitle(); %></title>
+	<meta name="description" content="<%= getDescription(); %>">
+	<meta property="og:locale" content="ja_JP">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="<%= getSiteUrl(); %>">
+	<meta property="og:title" content="<%= getSiteTitle(); %>">
+	<meta property="og:description" content="<%= getDescription(); %>">
+	<meta property="og:image" content="<%= getSiteUrl(); %>/ogp.jpg">
+	<meta property="og:site_name" content="<%= getSiteTitle(); %>">
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+	<meta name="format-detection" content="telephone=no,email=no,address=no">
+	<link rel="shortcut icon" href="<%= getRelativePath('/favicon.ico'); %>">
+	<link rel="apple-touch-icon" href="<%= getRelativePath('/apple-touch-icon.png'); %>">
+	<link rel="stylesheet" href="<%= getRelativePath('/css/slick.css'); %>">
+	<link rel="stylesheet" href="<%= getRelativePath('/style.css'); %>">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body class="<%= getBodyClass(); %>">
+	<div id="all">
+		<header class="l-header">
+			<div class="l-header__inner">
+				<div class="l-header__content">
+					<div class="l-header__logo">
+						<h1><a href="<%= getRelativePath('/'); %>"><img src="<%= getRelativePath('/images/common/logo.png'); %>" alt="富士の苑"></a></h1>
+					</div>
+					<nav class="l-header__nav">
+						<div class="l-header__nav__inner">
+							<div class="l-header__contents">
+								<ul class="l-header__list">
+									<li class="l-header__item">
+										<a class="l-header__link" href="<%= getRelativePath('/'); %>">
+											<span class="home">HOME</span>
+										</a>
+									</li>
+									<li class="l-header__item">
+										<a class="l-header__link" href="<%= getRelativePath('/facility/'); %>">
+											<span class="facility">施設案内</span>
+										</a>
+									</li>
+									<li class="l-header__item">
+										<a class="l-header__link" href="<%= getRelativePath('/lodging/'); %>">
+											<span class="lodging">宿泊</span>
+										</a>
+									</li>
+									<li class="l-header__item">
+										<a class="l-header__link" href="<%= getRelativePath('/onsen/'); %>">
+											<span class="onsen">温泉</span>
+										</a>
+									</li>
+									<li class="l-header__item">
+										<a class="l-header__link" href="<%= getRelativePath('/meal/'); %>">
+											<span class="meal">お食事</span>
+										</a>
+									</li>
+									<li class="l-header__item">
+										<a class="l-header__link" href="<%= getRelativePath('/sightseeing/'); %>">
+											<span class="sightseeing">周辺観光</span>
+										</a>
+									</li>
+									<li class="l-header__item">
+										<a class="l-header__link" href="<%= getRelativePath('/access/'); %>">
+											<span class="access">アクセス</span>
+										</a>
+									</li>
+								</ul>
+								<!-- sp -->
+								<div class="l-header__menusp u-only__sp u-center">
+									<p class="txt">お問い合わせはこちらから</p>
+									<a href="tel:0925514126" class="c-btnContact --tel">
+										<span>(092)551-4126</span>
+									</a>
+									<a href="mailto:&#105;&#110;&#102;&#111;&#64;&#102;&#117;&#106;&#105;&#110;&#111;&#101;&#110;&#46;&#99;&#111;&#46;&#106;&#112;" class="c-btnContact --mail">
+										<span>お問い合わせ</span>
+									</a>
+									<p class="">営業時間 10：00～22：00</p>
+									<a href="#" target="_blank" class="txt">個人情報保護方針</a>
+									<p class="copy">© FUJINOEN All Rights Reserved</p>
+								</div>
+							</div>
+						</nav>
+						<div class="l-header__contact">
+							<div class="l-header__contact--phone u-only__pc">
+								<div class="tel">(092)551-4126</div>
+								<div class="mail">
+									<a href="mailto:&#105;&#110;&#102;&#111;&#64;&#102;&#117;&#106;&#105;&#110;&#111;&#101;&#110;&#46;&#99;&#111;&#46;&#106;&#112;" class="c-btnContact --mail">
+										<span>お問い合わせ</span>
+									</a>
+								</div>
+							</div>
+							<div class="l-header__contact--other">
+								<p class="u-only__pc">
+									営業時間<br>10：00～22：00
+								</p>
+								<div class="language">
+									<a href="<%= getSiteUrl(); %>">日本語</a><span>/</span><a href="https://translate.google.com/translate?sl=ja&tl=en&u=<%= getSiteUrl(); %>">English</a>
+								</div>
+							</div>
+						</div>
+						<div class="l-menu__button">
+							<img src="<%= getRelativePath('/images/common/nav_open.png'); %>" alt="icon close menu" class="is-click1">
+							<img src="<%= getRelativePath('/images/common/nav_close.png'); %>" alt="icon open menu" class="is-click2">
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- /#header -->
+		<div class="l-content <% if (getPageId() != 'index') { %>u-padding<% } %> ">
+			<main class="l-primary"><% if (getPageId() == 'index') { %>
+				<div class="c-mainvisual">
+					<div class="c-mainvisual">
+						<div class="c-mainvisual__item js-mainslick">
+							<div class="slick-slide">
+								<div class="c-mainvisual__slide" style="background-image: url(<%= getRelativePath('/images/index/img_mv01.jpg'); %>);"></div>
+								<div class="c-mainvisual__content u-center">
+									<img src="/images/index/img_mv01_txt.png" alt="">
+								</div>
+							</div>
+							<div class="slick-slide">
+								<div class="c-mainvisual__slide" style="background-image: url(<%= getRelativePath('/images/index/img_mv02.jpg'); %>);"></div>
+								<div class="c-mainvisual__content u-center">
+									<img src="/images/index/img_mv02_txt.png" alt="">
+								</div>
+							</div>
+							<div class="slick-slide">
+								<div class="c-mainvisual__slide" style="background-image: url(<%= getRelativePath('/images/index/img_mv03.jpg'); %>);"></div>
+								<div class="c-mainvisual__content u-center">
+									<img src="/images/index/img_mv03_txt.png" alt="">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div><% } else { %>
+				<div class="c-pagetitle">
+					<div class="c-pagetitle__image"></div>
+					<h2 class="c-pagetitle__heading"><% if (_.indexOf(_.keys(config.categories), config.page.category) !== -1) { %>
+						<strong><%- getEachPageTitle(); %></strong>
+						<% } %>
+					</h2>
+				</div>
+				<% } %>
+				<%- include('_breadline'); %>
+				<article class="<%= getArticleClass(); %>">

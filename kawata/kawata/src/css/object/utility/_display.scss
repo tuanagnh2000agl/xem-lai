@@ -1,0 +1,30 @@
+/* display */ 
+.u-inlineblock {
+	display: inline-block;
+}
+// Desktop
+// --------------------------------------------------
+@include media-breakpoint-pc {
+	.u-only__wideSp {
+		display: none !important;
+	}
+}
+@include media-breakpoint-pc-tab {
+	.u-only__sp {
+		display: none !important;
+	}
+}
+//Phone
+// --------------------------------------------------
+// Tablet + Phone
+// --------------------------------------------------
+@include media-breakpoint-tab-sp {
+	.u-only__widePc {
+		display: none !important;
+	}
+}
+@include media-breakpoint-sp {
+    .u-only__pc {
+		display: none !important;
+	}
+}

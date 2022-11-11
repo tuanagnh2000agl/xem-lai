@@ -1,0 +1,36 @@
+.l-table{
+        font-family: $font-family-gothic;
+        border: 1px solid $blue;
+        width: 100%;
+        &.--One{
+            .l-table__th, .l-table__td{
+                width: 25%;
+                padding: 13px 0;
+            }
+        }
+
+        &.--Two{
+            .l-table__th{
+                width: 25%;
+                padding: 13px 0;
+            }
+            .l-table__td{
+                width: 37.5%;
+                padding: 13px 0;
+            }
+        }
+    &__th{
+        background: $blue;
+        color: #fff;
+        text-align: center;
+        vertical-align: middle;
+        &:last-child{
+            border-bottom: 0;
+            border-right: 0;
+        }
+    }
+    &__td{
+        text-align: center;
+    }
+   
+}

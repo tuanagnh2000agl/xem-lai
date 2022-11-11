@@ -1,0 +1,102 @@
+// Clearfix
+// -------------------------
+@mixin clearfix() {
+	&::after {
+		display: block;
+		content: "";
+		clear: both;
+	}
+}
+
+// Animation
+// -------------------------
+@mixin animation($animation-name) {
+	animation: $animation-name;
+	animation-fill-mode: both;
+}
+
+// Background Image Gradient
+// -------------------------
+@mixin background-image-gradient($gradient) {
+	background-image: -webkit-#{$gradient};
+	background-image:    -moz-#{$gradient};
+	background-image:         #{$gradient};
+}
+
+// Replace Image
+// -------------------------
+@mixin replace-image($width: "", $height: "", $display: block) {
+	display: $display;
+	overflow: hidden;
+	color: transparent;
+	text-decoration: none;
+	text-indent: 110%;
+	white-space: nowrap;
+	font-size: 0;
+	@if $width != "" {
+		width: $width;
+	}
+	@if $height != "" {
+		height: $height;
+	}
+	@content;
+}
+
+// Background Color
+// -------------------------
+@mixin background-color($color) {
+	background-color: $color;
+	filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#{ie-hex-str($color)}', endColorstr='#{ie-hex-str($color)}');
+	@content;
+}
+
+// Placeholder Color
+// -------------------------
+@mixin placeholder-color($color) {
+	&:-moz-placeholder            { color: $color; } // Firefox 4-18
+	&::-moz-placeholder           { color: $color; } // Firefox 19+
+	&:-ms-input-placeholder       { color: $color; } // Internet Explorer 10+
+	&::-webkit-input-placeholder  { color: $color; } // Safari and Chrome
+	@content;
+}
+
+// Text Overflow
+// -------------------------
+@mixin text-overflow() {
+	overflow: hidden;
+	-ms-text-overflow: ellipsis;
+	 -o-text-overflow: ellipsis;
+	    text-overflow: ellipsis;
+	white-space: nowrap;
+	word-break: normal;
+	overflow-wrap: normal;
+	word-wrap: normal;
+	@content;
+}
+
+// Background Gradient
+// -------------------------
+@mixin background-gradient-lighten($color: #666, $lighten: 10%) {
+	background-image: linear-gradient(to bottom, lighten($color, $lighten) 0%, $color 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#{ie-hex-str(lighten($color, $lighten))}', endColorstr='#{ie-hex-str($color)}');
+	background-color: $color;
+}
+
+@mixin background-gradient-darken($color: #666, $darken: 10%) {
+	background-image: linear-gradient(to bottom, darken($color, $darken) 0%, $color 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#{ie-hex-str(darken($color, $darken))}', endColorstr='#{ie-hex-str($color)}');
+	background-color: $color;
+}
+
+// Background Gradient
+// -------------------------
+@mixin gradient-vertical($start-color: #555, $end-color: #333, $start-percent: 0%, $end-percent: 100%) {
+	background-image: linear-gradient(to bottom, $start-color $start-percent, $end-color $end-percent);
+	filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#{ie-hex-str($start-color)}', endColorstr='#{ie-hex-str($end-color)}');
+}
+
+// Reset filters for IE
+// -------------------------
+@mixin reset-filter() {
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}

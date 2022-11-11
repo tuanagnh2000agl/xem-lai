@@ -1,0 +1,113 @@
+.slick-slide {
+    width: 100%;
+    height: calc(100vh - 60px);
+    z-index: 1;
+    background: center center no-repeat;
+    background-size: cover;
+}
+
+.slick-arrow {
+    // reset
+    display: block;
+    overflow: hidden;
+    font-size: 0;
+    color: transparent;
+    text-decoration: none;
+    background-color: transparent;
+    outline: none;
+    z-index: 2;
+    cursor: pointer;
+    
+    // dezain
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 1px solid #000;
+
+    // position 
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.slick-next {
+    right: 20px;
+    &::after {
+        content: "";
+        display: block;
+        width: 20px;
+        height: 20px;
+        border-bottom: 4px solid #000;
+        border-right: 4px solid #000;
+        position: absolute;
+        left: 45%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+    }
+}
+.slick-prev {
+    left: 20px;
+    &::after {
+        content: "";
+        display: block;
+        width: 20px;
+        height: 20px;
+        border-bottom: 4px solid #000;
+        border-right: 4px solid #000;
+        position: absolute;
+        right: 45%;
+        top: 50%;
+        transform: translateX(50%) translateY(-50%) rotate(135deg);
+    }
+}
+
+.slick-dots {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    li {
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        margin: 0 15px;
+        position: relative;
+        cursor: pointer;
+        button {
+            // reset
+            display: block; 
+            background: transparent;
+            width: 100%;
+            height: 100%;
+            outline: none;
+            font-size: 0;
+            border: none;
+            color: transparent;
+            padding: 5px;
+        }
+        &::before {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: $slick-dots-color;
+            border: 2px solid $slick-dots-border;
+        }
+
+        &.slick-active {
+            &::before {
+                background: $slick-dots-color--active;
+                border: 2px solid $slick-dots-border--active;
+            }
+        }
+    }
+}
+
+
+
+

@@ -1,0 +1,5 @@
+@include media-breakpoint-pc{
+    a[href^="tel"]{
+        pointer-events: none;
+    }
+}

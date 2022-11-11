@@ -1,0 +1,355 @@
+<%- include('_config', { extend: {
+	relativePath: '.' ,
+	page: {
+		id: 'index' ,
+		title: 'TOPページ' ,
+		description: 'TOPページです' ,
+	}
+}}); %><%- include('_header'); %>
+		<section class="p-topNews">
+			<div class="l-inner">
+				<div class="p-topNews__title u-center">
+					<h2 class="c-heading1"><span>News</span>お知らせ</h2>
+				</div>
+				<div class="c-news">
+					<ul class="c-news__list">
+						<li class="c-news__item --new">
+							<a href="<%= getRelativePath('/'); %>">
+								<div class="c-news__day">2022.00.00 </div>
+								<div class="c-news__title">テキストテキストテキストテキストテキストテキストテキスト…</div>
+							</a>
+						</li>
+						<li class="c-news__item">
+							<a href="<%= getRelativePath('/'); %>">
+								<div class="c-news__day">2022.00.00 </div>
+								<div class="c-news__title">テキストテキストテキストテキストテキストテキストテキスト…</div>
+							</a>
+						</li>
+						<li class="c-news__item">
+							<a href="<%= getRelativePath('/'); %>">
+								<div class="c-news__day">2022.00.00 </div>
+								<div class="c-news__title">テキストテキストテキストテキストテキストテキストテキスト…</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="u-center">
+					<a href="<%= getRelativePath('/news'); %>" class="c-btn">お知らせ一覧</a>
+				</div>
+			</div>
+		</section>
+		<section class="p-topAbout l-bg">
+			<div class="l-inner">
+				<div class="u-center">
+					<h2 class="c-heading1"><span>About</span>富士の苑について</h2>
+					<h3 class="c-heading2">～富士の苑のポイント～</h3>
+				</div>
+				<div class="p-topAbout__flex">
+					<div class="p-topAbout__point u-center">
+						<div class="c-number">ポイント<span class="c-number__circle">1</span></div>
+						<img src="<%= getRelativePath('/images/index/img_about01.jpg'); %>" alt="ポイント">
+						<p class="c-text1 --bold">
+							当施設は福岡市でも数少ない<br>
+							源泉の完全かけ流しの温泉旅館です。
+						</p>
+					</div>
+					<div class="p-topAbout__point u-center">
+						<div class="c-number">ポイント<span class="c-number__circle">2</span></div>
+						<img src="<%= getRelativePath('/images/index/img_about02.jpg'); %>" alt="ポイント">
+						<p class="c-text1 --bold">
+							ご宿泊から日帰り温泉のご利用、<br>
+							お食事やゴルフの練習もできる施設です。
+						</p>
+					</div>
+					<div class="p-topAbout__point u-center">
+						<div class="c-number">ポイント<span class="c-number__circle">3</span></div>
+						<img src="<%= getRelativePath('/images/index/img_about03.jpg'); %>" alt="ポイント">
+						<p class="c-text1 --bold">
+							低料金で気軽に利用しやすい施設です。
+						</p>
+					</div>
+				</div>
+				<div class="p-topAbout__btn">
+					<a href="" class="c-btn">施設のご案内</a>
+					<a href="" class="c-btn">予約方法</a>
+				</div>
+			</div>
+
+			<div class="p-topSlider">
+				<div class="l-inner --full">
+					<ul class="c-slider">
+						<li><img src="<%= getRelativePath('/images/index/img_about_slide01.jpg'); %>" alt="slider1"></li>
+						<li><img src="<%= getRelativePath('/images/index/img_about_slide02.jpg'); %>" alt="slider2"></li>
+						<li><img src="<%= getRelativePath('/images/index/img_about_slide03.jpg'); %>" alt="slider3"></li>
+						<li><img src="<%= getRelativePath('/images/index/img_about_slide04.jpg'); %>" alt="slider4"></li>
+						<li><img src="<%= getRelativePath('/images/index/img_about_slide05.jpg'); %>" alt="slider5"></li>
+						<li><img src="<%= getRelativePath('/images/index/img_about_slide06.jpg'); %>" alt="slider6"></li>
+						<li><img src="<%= getRelativePath('/images/index/img_about_slide07.jpg'); %>" alt="slider7"></li>
+						<li><img src="<%= getRelativePath('/images/index/img_about_slide08.jpg'); %>" alt="slider8"></li>
+					</ul>
+					<ul class="c-slider--rtl u-only__sp" dir="rtl">
+						<li><img src="<%= getRelativePath('/images/index/img_about_slide02.jpg'); %>" alt="slider2"></li>
+						<li><img src="<%= getRelativePath('/images/index/img_about_slide04.jpg'); %>" alt="slider4"></li>
+						<li><img src="<%= getRelativePath('/images/index/img_about_slide05.jpg'); %>" alt="slider5"></li>
+						<li><img src="<%= getRelativePath('/images/index/img_about_slide01.jpg'); %>" alt="slider1"></li>
+						<li><img src="<%= getRelativePath('/images/index/img_about_slide03.jpg'); %>" alt="slider3"></li>
+						<li><img src="<%= getRelativePath('/images/index/img_about_slide06.jpg'); %>" alt="slider6"></li>
+						<li><img src="<%= getRelativePath('/images/index/img_about_slide07.jpg'); %>" alt="slider7"></li>
+						<li><img src="<%= getRelativePath('/images/index/img_about_slide08.jpg'); %>" alt="slider8"></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="l-inner --wide">
+				<h3 class="c-heading2 --center">～施設・サービスのご案内～</h3>
+
+				<div class="p-topInfo__about">
+					<div class="p-topInfo__aboutItem">
+						<div class="p-topInfo__aboutItem1" style="background-image: url('<%= getRelativePath('/images/index/img_lodging.jpg'); %>');"></div>
+						<div class="p-topInfo__aboutItem2">
+							<h4 class="c-heading3">広々とした和室で<br class="u-only__sp">ゆったりと。</h4>
+							<p class="c-text1">客室は広々とした和室。<br>
+								ゆっくりとおくつろぎいただけます。<br>
+								おひとり様からサラリーマン、ファミリー、学生スポーツ団体<br>
+								の方までご利用いただけます。
+							</p>
+							<a href="" class="c-btn">ご宿泊について</a>
+						</div>
+					</div>
+					<div class="p-topInfo__aboutItem --reverse">
+						<div class="p-topInfo__aboutItem1" style="background-image: url('<%= getRelativePath('/images/index/img_onsen.jpg'); %>');"></div>
+						<div class="p-topInfo__aboutItem2">
+							<h4 class="c-heading3">源泉完全かけ流し</h4>
+							<p class="c-text1">
+								福岡市でも数少ない、源泉の完全かけ流し温泉です。<br>
+								日帰りでもご利用いただけます。お気軽にお立ち寄りください。
+							</p>
+							<a href="" class="c-btn">温泉について</a>
+						</div>
+					</div>
+				</div>
+				<!-- block2 -->
+				<div class="p-topInfo__block">
+					<div class="p-topInfo__blockInline" style="background-image: url('<%= getRelativePath('/images/index/img_meal.jpg'); %>');">
+						<div class="p-topInfo__blockContain">
+							<h4 class="c-heading4 --center">お食事</h4>
+							<p class="c-text1">
+								定食や御前物などいろいろなメニューをご用意しています。<br>
+								最大40名収容できる宴会場もあり、お集りの際にご利用いただけるお食事コースもございます。
+							</p>
+							<div class="u-center">
+								<a href="" class="c-btn">お食事について</a>
+							</div>
+						</div>
+					</div>
+					<div class="p-topInfo__blockInline" style="background-image: url('<%= getRelativePath('/images/index/img_golf.jpg'); %>');">
+						<div class="p-topInfo__blockContain --padding">
+							<h4 class="c-heading4 --center">ゴルフ場</h4>
+							<p class="c-text1">
+								併設するゴルフ場では低価格で時間制打ち放題。
+								温泉入浴特典もございます。
+							</p>
+							<div class="u-center">
+								<a href="" class="c-btn">ゴルフ場について</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="p-topPrice">
+			<div class="l-inner">
+				<div class="p-topPrice__price">
+					<div class="u-center">
+						<h2 class="c-heading1"><span>Price</span>料金表</h2>
+						<h3 class="c-heading2">～宿泊料金（目安）～</h3>
+					</div>
+					<table class="l-table --One">
+						<tr class="u-bg u-bbottom">
+							<th class="l-table__th u-right"></th>
+							<td class="l-table__td u-right">大人<br class="u-only__sp">（中学生以上）</td>
+							<td class="l-table__td u-right">小学生</td>
+							<td class="l-table__td">幼児<br class="u-only__sp">(3歳～小学生未満)</td>
+						</tr>
+						<tr>
+							<th  class="l-table__th u-bbottom">2食付き</th>
+							<td class="l-table__td u-right1 u-bbottom1">10,000円～</td>
+							<td class="l-table__td u-right1 u-bbottom1">6,700円～</td>
+							<td class="l-table__td u-bbottom1">5,600円～</td>
+						</tr>
+						<tr>
+							<th  class="l-table__th u-bbottom">朝食付き</th>
+							<td class="l-table__td u-right1 u-bbottom1">5,700円～</td>
+							<td class="l-table__td u-right1 u-bbottom1">5,200円～</td>
+							<td class="l-table__td u-bbottom1">4,100円～</td>
+						</tr>
+						<tr>
+							<th  class="l-table__th">素泊まり</th>
+							<td class="l-table__td u-right1">5,000円～</td>
+							<td class="l-table__td u-right1">4,500円～</td>
+							<td class="l-table__td">3,500円～</td>
+						</tr>
+					</table>
+					<div class="u-center">
+						<a href="" class="c-btn">ご宿泊について</a>
+					</div>
+				</div>
+				<div class="p-topPrice__daytrip">
+					<div class="p-topPrice__title u-center">
+						<h3 class="c-heading2">～日帰り温泉料金～</h3>
+						<p class="c-text1">当温泉施設は時間制料金となっています。</p>
+						<p class="c-text2 --bold">
+							<span class="c-text2 --fs2">立ち寄り湯</span><br>
+							10：00～22：00（21：00受付終了）
+						</p>
+					</div>
+					<table class="l-table --Two">
+						<tr class="u-bbottom u-bg">
+							<th class="l-table__th u-right"></th>
+							<th class="l-table__td u-right">大人<br class="u-only__sp">（中学生以上）</th>
+							<th class="l-table__td u-right">小人<br class="u-only__sp">（0才～小学生）</th>
+						</tr>
+						<tr>
+							<th  class="l-table__th u-bbottom u-right">1時間以内</th>
+							<td class="l-table__td u-bbottom1 u-right1">900円</td>
+							<td class="l-table__td u-bbottom1">700円</td>
+						</tr>
+						<tr>
+							<th  class="l-table__th u-bbottom u-right">2時間以内</th>
+							<td class="l-table__td u-right1">900円</td>
+							<td class="l-table__td">700円</td>
+						</tr>
+					</table>
+					<div class="p-topPrice__title u-center">
+						<p class="c-text2 --bold">
+							<span class="c-text2 --fs2">ゆっくりコース</span><br>
+							10：00～17：00
+						</p>
+					</div>
+					<table class="l-table  --Two">
+						<tr class="u-bbottom">
+							<th class="l-table__th u-right"></th>
+							<th class="l-table__td u-bg u-right">大人<br class="u-only__sp">（中学生以上）</th>
+							<th class="l-table__td u-bg">小人<br class="u-only__sp">（0才～小学生）</th>
+						</tr>
+						<tr>
+							<th  class="l-table__th u-right">
+								10：00<br class="u-only__sp">～<br class="u-only__sp">17：00 <br>
+								※時間無制限
+							</th>
+							<td class="l-table__td u-right1">
+								900円<br>
+								※毎週金曜日は<br class="u-only__sp">700円
+							</td>
+							<td class="l-table__td">700円</td>
+						</tr>
+					</table>
+					<p class="c-text1">
+						石鹸、リンスインシャンプー常備。<br class="u-only__sp">タオル類のご必要な物はご持参下さい。<br>
+						※館内にて貸出、販売もしております。</p>
+					<div class="u-center">
+						<a href="" class="c-btn">温泉について</a>
+					</div>
+				</div>
+				<div class="p-topPrice__golf">
+					<div class="u-center">
+						<h3 class="c-heading2">～ ゴルフ練習料金 ～</h3>
+						<p class="c-text2 --fs2 --bold">\  A・Bコースは温泉入浴特典あり  /</h4>
+					</div>
+					<div class="p-topPrice__golfText">
+						<div class="c-number">特典<span class="c-number__circle">1</span></div>
+						<p>
+							A・Bコースには温泉入浴特典1回あり。<br>
+							お一人様温泉利用1時間コース100円、2時間コース200円でご利用できます。
+						</p>
+					</div>
+					<div class="p-topPrice__golfText">
+						<div class="c-number">特典<span class="c-number__circle">2</span></div>
+						<p>
+							A・Bコースの利用券12枚にて打ち放題A・Bコース1回無料になります。<br>
+							※この際、新券の発行はありません。期間経過、温泉利用をされた券は無効です。
+						</p>
+					</div>
+					<table class="l-table --One">
+						<tr class="u-bg u-bbottom">
+							<th class="l-table__th u-right"></th>
+							<th class="l-table__td u-right">Aコース</th>
+							<th class="l-table__td u-right">Bコース</th>
+							<th class="l-table__td">Cコース</th>
+						</tr>
+						<tr>
+							<th  class="l-table__th u-bbottom">曜日</th>
+							<td class="l-table__td u-bbottom1 u-right1">平日</td>
+							<td class="l-table__td u-bbottom1 u-right1">土日祝祭日</td>
+							<td class="l-table__td u-bbottom1">平日・土日祝祭日</td>
+						</tr>
+						<tr>
+							<th  class="l-table__th u-bbottom">時間</th>
+							<td class="l-table__td u-bbottom1 u-right1">3時間</td>
+							<td class="l-table__td u-bbottom1 u-right1">2時間</td>
+							<td class="l-table__td u-bbottom1">20分</td>
+						</tr>
+						<tr>
+							<th  class="l-table__th u-bbottom">1名1打席</th>
+							<td class="l-table__td u-bbottom1 u-right1">1,000円</td>
+							<td class="l-table__td u-bbottom1 u-right1">1,000円</td>
+							<td class="l-table__td u-bbottom1">700円</td>
+						</tr>
+						<tr>
+							<th  class="l-table__th">
+								同伴者の<br class="u-only__sp">練習
+								<span class="u-only__pc"><br>（同一打席に限る）</span>
+								<span class="u-only__so">※</span>
+							</th>
+							<td class="l-table__td u-right1">500円</td>
+							<td class="l-table__td u-right1">500円</td>
+							<td class="l-table__td">無料</td>
+						</tr>
+					</table>
+					<p class="c-text u-only__sp">※（同一打席に限る）</p>
+					<div class="u-center">
+						<a href="" class="c-btn">ゴルフ場について</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="p-topSight l-bg">
+			<div class="l-inner --full">
+				<div class="u-center">
+					<h2 class="c-heading1"><span>sightseeing</span>周辺観光</h2>
+					<p class="c-text1">
+						福岡の中心街である天神・博多・中州まで5～6km。<br>
+						人気の観光スポットやレジャー施設など、福岡の魅力をご紹介します。
+					</p>
+				</div>
+				<ul class="c-slider">
+					<li><img src="<%= getRelativePath('/images/index/img_sightseeing_slide01.jpg'); %>" alt="sightseeing1"></li>
+					<li><img src="<%= getRelativePath('/images/index/img_sightseeing_slide02.jpg'); %>" alt="sightseeing2"></li>
+					<li><img src="<%= getRelativePath('/images/index/img_sightseeing_slide03.jpg'); %>" alt="sightseeing3"></li>
+					<li><img src="<%= getRelativePath('/images/index/img_sightseeing_slide04.jpg'); %>" alt="sightseeing4"></li>
+					<li><img src="<%= getRelativePath('/images/index/img_sightseeing_slide05.jpg'); %>" alt="sightseeing5"></li>
+					<li><img src="<%= getRelativePath('/images/index/img_sightseeing_slide06.jpg'); %>" alt="sightseeing6"></li>
+					<li><img src="<%= getRelativePath('/images/index/img_sightseeing_slide07.jpg'); %>" alt="sightseeing7"></li>
+					<li><img src="<%= getRelativePath('/images/index/img_sightseeing_slide08.jpg'); %>" alt="sightseeing8"></li>
+				</ul>
+				<div class="u-center">
+					<a href="" class="c-btn">周辺観光</a>
+				</div>
+			</div>
+		</section>
+		<section class="p-topMap">
+				<div class="l-inner --full">
+					<a href="https://www.fukuoka-onsen.com/" target="_blank" class="u-center">
+						<img src="<%= getRelativePath('/images/index/bnr_fukuoka.jpg'); %>" alt="ふくおかの温泉地">
+						<p class="c-text1">福岡県観光温泉地協会</p>
+					</a>
+					<div class="p-topMap__location">
+						<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3325.179377097893!2d130.4308804!3d33.5487155!3m2!1i1024!2i768!4f13.1!3m3!3m2!1sja!2s!4v1667790780177!5m2!1sja!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+					</div>
+					<div class="u-center">
+						<a href="" class="c-btn">アクセス</a>
+					</div>
+				</div>
+		</section>
+		<!-- and slider-->
+		<%- include('_footer'); %>

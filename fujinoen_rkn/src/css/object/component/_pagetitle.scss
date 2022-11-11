@@ -1,0 +1,126 @@
+/* pagetitle */
+
+.c-pagetitle {
+    position: relative;
+    &__image {
+        top: 0;
+        left: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: #b8b8b8 no-repeat center center;
+        background-size: cover;
+    }
+    &__heading {
+        height: 420px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 0;
+        strong{
+            width: 250px;
+            height: 100px;
+            background: no-repeat center center;
+            background-size: cover;
+        }
+    }
+}
+
+// 2ndpage mainimg
+body.news {
+    .c-pagetitle {
+        &__image{
+            background-image: url(./images/news/bg_main.jpg);
+        }
+        &__heading {
+            strong{
+                background-image: url(./images/news/h2_ttl.png);
+            }
+        }
+    }
+}
+body.facility {
+    .c-pagetitle {
+        &__image{
+            background-image: url(./images/facility/bg_main.jpg);
+        }
+        &__heading {
+            strong{
+                background-image: url(./images/facility/h2_ttl.png);
+            }
+        }
+    }
+}
+body.lodging {
+    .c-pagetitle {
+        &__image{
+            background-image: url(./images/lodging/bg_main.jpg);
+        }
+        &__heading {
+            strong{
+                background-image: url(./images/lodging/h2_ttl.png);
+            }
+        }
+    }
+}
+body.onsen {
+    .c-pagetitle {
+        &__image{
+            background-image: url(./images/onsen/bg_main.jpg);
+        }
+        &__heading {
+            strong{
+                background-image: url(./images/onsen/h2_ttl.png);
+            }
+        }
+    }
+}
+body.meal {
+    .c-pagetitle {
+        &__image{
+            background-image: url(./images/meal/bg_main.jpg);
+        }
+        &__heading {
+            strong{
+                background-image: url(./images/meal/h2_ttl.png);
+            }
+        }
+    }
+}
+body.sightseeing {
+    .c-pagetitle {
+        &__image{
+            background-image: url(./images/sightseeing/bg_main.jpg);
+        }
+        &__heading {
+            strong{
+                background-image: url(./images/sightseeing/h2_ttl.png);
+            }
+        }
+    }
+}
+body.access {
+    .c-pagetitle {
+        &__image{
+            background-image: url(./images/access/bg_main.jpg);
+        }
+        &__heading {
+            strong{
+                background-image: url(./images/access/h2_ttl.png);
+            }
+        }
+    }
+}
+
+
+// Tablet + Phone
+// --------------------------------------------------
+@include media-breakpoint-tab-sp {
+    .c-pagetitle {
+        &__heading {
+            height: 300px;
+        }
+    }
+}

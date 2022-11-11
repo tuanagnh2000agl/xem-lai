@@ -1,0 +1,308 @@
+<%- include('../_config', { extend: {
+	relativePath: '..',
+	page: {
+		category: 'sightseeing',
+		id: 'index',
+		title: '周辺観光',
+		titlehtml: '',
+		description: '周辺観光のディスクリプションです。',
+	}
+}}); %><%- include('../_header'); %>
+					<section class="p-sightseeingMap">
+						<div class="l-inner">
+							<p class="l-text1">
+								当旅館は、都心天神から、また博多・中洲へ5～6kmとほど近い距離にあります。<br>
+								福岡市内までも非常にアクセスのよい場所にございます。見どころいっぱいの福岡観光にお役立てください。
+							</p>
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31631.831160180118!2d130.41629757666686!3d33.556320502451406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x354190e03b847737%3A0x2598a959a3b7f0f0!2z5a-M5aOr44Gu6IuR!5e0!3m2!1sja!2sjp!4v1668082147468!5m2!1sja!2sjp" width="1200" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+							<div class="c-link__anc">
+								<a href="<%= getRelativePath('/sightseeing/'); %>#anc01" class="c-btn">福岡満喫コース</a>
+								<a href="<%= getRelativePath('/sightseeing/'); %>#anc02" class="c-btn">親子向けコース</a>
+								<a href="<%= getRelativePath('/sightseeing/'); %>#anc03" class="c-btn">大人向けコース</a>
+							</div>
+						</div>
+					</section>
+					<section class="p-sightseeingCourse l-bg">
+						<div class="p-sightseeingCourse__inner" id="anc01">
+							<h3 class="c-heading1 --mb2"><span>Enjoy Fukuoka</span>福岡満喫コース</h3>
+							<P class="c-text1 u-center --center">福岡を満喫できる王道コースのご紹介です。</P>
+							<h4 class="c-heading2">～1日目～</h4>
+							<div class="p-sightseeingCourse__flex">
+								<div class="p-sightseeingCourse__flexItem1">
+									<img src="<%= getRelativePath('/images/sightseeing/img_enjoy01.jpg'); %>" alt="">
+								</div>
+								<div class="p-sightseeingCourse__flexItem2">
+									<div class="p-sightseeingCourse__flexTtl">
+										<div class="c-number"><span class="c-number__circle">1</span></div>
+										<p class="c-heading4">福岡タワー</p>
+									</div>
+									<p class="c-text1">
+										福岡タワーは高さ234mで、日本で一番高い海浜タワーです。<br>
+										高さ123mの展望室から福岡の海と山と街を一望することが出来ます。<br>
+										<br>
+										【福岡タワー 公式HP】<br>
+										<a href="https://www.fukuokatower.co.jp/" target="_blank">https://www.fukuokatower.co.jp/</a>
+									</p>
+								</div>
+							</div>
+							<div class="p-sightseeingCourse__line">
+								<span>徒歩約2分</span>
+							</div>
+							<div class="p-sightseeingCourse__flex">
+								<div class="p-sightseeingCourse__flexItem1">
+									<img src="<%= getRelativePath('/images/sightseeing/img_enjoy02.jpg'); %>" alt="">
+								</div>
+								<div class="p-sightseeingCourse__flexItem2">
+									<div class="p-sightseeingCourse__flexTtl">
+										<div class="c-number"><span class="c-number__circle">2</span></div>
+										<p class="c-heading4">シーサイドももち海浜公園</p>
+									</div>
+									<p class="c-text1">
+										福岡タワーにのぼった後はシーサイドももち海浜公園。<br>
+										飲食店が複数あるので、海を見ながらランチを楽しむことが出来ますよ。
+									</p>
+								</div>
+							</div>
+							<div class="p-sightseeingCourse__line">
+								<span class="--car">車で約4分</span>
+							</div>
+							<div class="p-sightseeingCourse__flex">
+								<div class="p-sightseeingCourse__flexItem1">
+									<img src="<%= getRelativePath('/images/sightseeing/img_enjoy03.jpg'); %>" alt="">
+								</div>
+								<div class="p-sightseeingCourse__flexItem2">
+									<div class="p-sightseeingCourse__flexTtl">
+										<div class="c-number"><span class="c-number__circle">3</span></div>
+										<p class="c-heading4">福岡市博物館</p>
+									</div>
+									<p class="c-text1">
+										館内には、常設展示、企画展示、特別展示の3つの展示室があり、古代から大陸との交流が盛んだった福岡ならではの資料を多数展示しています。常設・企画展示室の目玉は、志賀島で発見された国宝の金印「漢委奴国王」と、黒田節で有名な名鎗「日本号」。金印のレプリカなど、ユニークなグッズが盛りだくさんのミュージアムショップもあります。<br>
+										<br>
+										【福岡市博物館 公式HP】<br>
+										<a href="http://museum.city.fukuoka.jp/" target="_blank">http://museum.city.fukuoka.jp/</a>
+									</p>
+								</div>
+							</div>
+							<div class="p-sightseeingCourse__line">
+								<span class="--car">車で約32分</span>
+							</div>
+							<div class="p-sightseeingCourse__flex --focus">
+								<div class="p-sightseeingCourse__flexItem1">
+									<img src="<%= getRelativePath('/images/sightseeing/img_enjoy04.jpg'); %>" alt="">
+								</div>
+								<div class="p-sightseeingCourse__flexItem2">
+									<div class="p-sightseeingCourse__flexTtl">
+										<div class="c-number"><span class="c-number__circle">4</span></div>
+										<p class="c-heading4">富士の苑</p>
+									</div>
+									<p class="c-text1">
+										宿泊者限定で早朝入浴（7:00～10:00）ができ、テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+									</p>
+								</div>
+							</div>
+							<h4 class="c-heading2 --my1">～2日目～</h4>
+							<div class="p-sightseeingCourse__line">
+								<span class="--car">車で約25分</span>
+							</div>
+							<div class="p-sightseeingCourse__flex">
+								<div class="p-sightseeingCourse__flexItem1">
+									<img src="<%= getRelativePath('/images/sightseeing/img_enjoy05.jpg'); %>" alt="">
+								</div>
+								<div class="p-sightseeingCourse__flexItem2">
+									<div class="p-sightseeingCourse__flexTtl">
+										<div class="c-number"><span class="c-number__circle">5</span></div>
+										<p class="c-heading4">天神</p>
+									</div>
+									<p class="c-text1">
+										九州最大の繁華街ともいわれる天神は、オフィス、デパートなどが立ち並ぶファッションと商業の中心地です。<br>
+										バス、電車、地下鉄と、交通の便もよく、週末には九州各地から買い物やイベント目的の人々が集まります。<br>
+										また地下街も充実しており、20箇所近くのショッピングゾーンに直結し、市営地下鉄によって博多駅や空港へもアクセスが便利です。
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="p-sightseeingCourse__inner" id="anc02">
+							<h3 class="c-heading1 --mb2"><span>For parents and children</span>親子向けコース</h3>
+							<P class="c-text1 u-center --center">大人も子どももみんなで楽しめる、親子向けコースのご紹介です。</P>
+							<h4 class="c-heading2">～1日目～</h4>
+							<div class="p-sightseeingCourse__flex">
+								<div class="p-sightseeingCourse__flexItem1">
+									<img src="<%= getRelativePath('/images/sightseeing/img_parents01.jpg'); %>" alt="">
+								</div>
+								<div class="p-sightseeingCourse__flexItem2">
+									<div class="p-sightseeingCourse__flexTtl">
+										<div class="c-number"><span class="c-number__circle">1</span></div>
+										<p class="c-heading4">ららぽーと福岡</p>
+									</div>
+									<p class="c-text1">
+										富士の苑から車で約15分の場所にある、九州初上陸のららぽーと。エントランスには実物大vガンダム立像がそびえたっています。買いもの、遊び、食事まで、家族みんなで様々な楽しみ方が出来ますよ。
+										<br>
+										【ららぽーと福岡 公式HP】<br>
+										<a href="https://mitsui-shopping-park.com/lalaport/fukuoka/" target="_blank">https://mitsui-shopping-park.com/lalaport/fukuoka/</a>
+									</p>
+								</div>
+							</div>
+							<div class="p-sightseeingCourse__line">
+								<span>ららぽーと福岡内</span>
+							</div>
+							<div class="p-sightseeingCourse__flex">
+								<div class="p-sightseeingCourse__flexItem1">
+									<img src="<%= getRelativePath('/images/sightseeing/img_parents02.jpg'); %>" alt="">
+								</div>
+								<div class="p-sightseeingCourse__flexItem2">
+									<div class="p-sightseeingCourse__flexTtl">
+										<div class="c-number"><span class="c-number__circle">2</span></div>
+										<p class="c-heading4">福岡おもちゃ美術館</p>
+									</div>
+									<p class="c-text1">
+										ららぽーと福岡の中にある、赤ちゃんにも安心な木育おもちゃから大人も楽しめる世界のゲームまで、すべての年代の方が楽しめるミュージアムです。<br>
+										実際におもちゃに触れて遊べたり、おもちゃの工作体験もできます。<br>
+										【福岡おもちゃ美術館 公式HP】<br>
+										<a href="https://art-play.or.jp/ftm/" target="_blank">https://art-play.or.jp/ftm/</a>
+									</p>
+								</div>
+							</div>
+							<div class="p-sightseeingCourse__line">
+								<span class="--car">車で約15分</span>
+							</div>
+							<div class="p-sightseeingCourse__flex --focus">
+								<div class="p-sightseeingCourse__flexItem1">
+									<img src="<%= getRelativePath('/images/sightseeing/img_parents03.jpg'); %>" alt="">
+								</div>
+								<div class="p-sightseeingCourse__flexItem2">
+									<div class="p-sightseeingCourse__flexTtl">
+										<div class="c-number"><span class="c-number__circle">3</span></div>
+										<p class="c-heading4">富士の苑</p>
+									</div>
+									<p class="c-text1">
+										客室は全室広々とした和室となっています。ベッドよりも布団で寝たい方、小さいお子様をお連れのお客様に非常に喜んでいただいております。<br>
+										当館お食事処では、小さなお子様、幼児向けにお子様ランチや低いテーブルもご用意いたします。
+									</p>
+								</div>
+							</div>
+							<h4 class="c-heading2 --my1">～2日目～</h4>
+							<div class="p-sightseeingCourse__line">
+								<span class="--car">車で約20分</span>
+							</div>
+							<div class="p-sightseeingCourse__flex">
+								<div class="p-sightseeingCourse__flexItem1">
+									<img src="<%= getRelativePath('/images/sightseeing/img_parents04.jpg'); %>" alt="">
+								</div>
+								<div class="p-sightseeingCourse__flexItem2">
+									<div class="p-sightseeingCourse__flexTtl">
+										<div class="c-number"><span class="c-number__circle">4</span></div>
+										<p class="c-heading4">福岡市動植物園</p>
+									</div>
+									<p class="c-text1">
+										福岡市動植物園は、福岡市中心部からのアクセスも良く、動物は約100種、植物は約2,600種を有する。<br>
+										福岡市民の憩いの場として、70年近くものあいだ親しまれている、深い緑に包まれた都会のオアシスです。<br>
+										<br>
+										【福岡市動植物園 公式HP】<br>
+										<a href="https://zoo.city.fukuoka.lg.jp/" target="_blank">https://zoo.city.fukuoka.lg.jp/</a>
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="p-sightseeingCourse__inner" id="anc03">
+							<h3 class="c-heading1 --mb2"><span>For adults</span>大人向けコース</h3>
+							<P class="c-text1 u-center --center">お仕事で福岡に来られた方などに向けた、大人向けコースのご紹介です。</P>
+							<h4 class="c-heading2">～1日目～</h4>
+							<div class="p-sightseeingCourse__flex">
+								<div class="p-sightseeingCourse__flexItem1">
+									<img src="<%= getRelativePath('/images/sightseeing/img_adults01.jpg'); %>" alt="">
+								</div>
+								<div class="p-sightseeingCourse__flexItem2">
+									<div class="p-sightseeingCourse__flexTtl">
+										<div class="c-number"><span class="c-number__circle">1</span></div>
+										<p class="c-heading4">博多駅</p>
+									</div>
+									<p class="c-text1">
+										博多駅は九州最大のターミナル駅で、国内線は地下鉄と直結しており、九州各地へのアクセスも便利です。<br>
+										駅構内には飲食店や商業施設が立ち並んでいます。<br>
+										福岡のお土産ならはなんでも揃うといっても過言ではありません。
+									</p>
+								</div>
+							</div>
+							<div class="p-sightseeingCourse__line">
+								<span class="--train">地下鉄で約3分</span><br>
+								（天神・姪浜・唐津方面行き/中洲川端駅で下車）<br>
+								<span>徒歩約5分</span>
+							</div>
+							<div class="p-sightseeingCourse__flex">
+								<div class="p-sightseeingCourse__flexItem1">
+									<img src="<%= getRelativePath('/images/sightseeing/img_adults02.jpg'); %>" alt="">
+								</div>
+								<div class="p-sightseeingCourse__flexItem2">
+									<div class="p-sightseeingCourse__flexTtl">
+										<div class="c-number"><span class="c-number__circle">2</span></div>
+										<p class="c-heading4">中洲屋台</p>
+									</div>
+									<p class="c-text1">
+										中洲・天神を中心に200軒以上もある屋台は、博多の名物。定番のラーメンをはじめ、おでん、焼き鳥、天ぷら、餃子など、メニューは多彩です。<br>
+										お仕事終わりにふらっと立ち寄ってほしい、福岡の名スポットです。
+									</p>
+								</div>
+							</div>
+							<div class="p-sightseeingCourse__line">
+								<span class="--train">車で約40分</span>
+							</div>
+							<div class="p-sightseeingCourse__flex --focus">
+								<div class="p-sightseeingCourse__flexItem1">
+									<img src="<%= getRelativePath('/images/sightseeing/img_adults03.jpg'); %>" alt="">
+								</div>
+								<div class="p-sightseeingCourse__flexItem2">
+									<div class="p-sightseeingCourse__flexTtl">
+										<div class="c-number"><span class="c-number__circle">3</span></div>
+										<p class="c-heading4">富士の苑</p>
+									</div>
+									<p class="c-text1">
+										富士の苑では、素泊まりの方でもお食事処でご夕食をご注文される方は多いです。<br>
+										アルコールやお酒にあう一品料理などをご用意しているため、温泉で温まった後に思う存分おくつろぎいただけます。
+									</p>
+								</div>
+							</div>
+							<h4 class="c-heading2 --my1">～2日目～</h4>
+							<div class="p-sightseeingCourse__line">
+								<span class="--train">電車で約55分</span>
+							</div>
+							<div class="p-sightseeingCourse__flex">
+								<div class="p-sightseeingCourse__flexItem1">
+									<img src="<%= getRelativePath('/images/sightseeing/img_adults04.jpg'); %>" alt="">
+								</div>
+								<div class="p-sightseeingCourse__flexItem2">
+									<div class="p-sightseeingCourse__flexTtl">
+										<div class="c-number"><span class="c-number__circle">4</span></div>
+										<p class="c-heading4">太宰府天満宮</p>
+									</div>
+									<p class="c-text1">
+										学問の神様・菅原道真有名な太宰府天満宮。境内には、梅の木が約6,000本あり、2月～3月頃は花見でにぎわいます。豪壮華麗な桃山様式の建築物や、国宝を収めた宝物殿など、見所もおおいです。名物の『梅ケ枝もち』人気のお土産です。<br>
+										<br>
+										【太宰府天満宮 公式HP】<br>
+										<a href="http://www.dazaifutenmangu.or.jp" target="_blank">http://www.dazaifutenmangu.or.jp</a>
+									</p>
+								</div>
+							</div>
+							<div class="p-sightseeingCourse__line">
+								<span>徒歩約10分</span>
+							</div>
+							<div class="p-sightseeingCourse__flex">
+								<div class="p-sightseeingCourse__flexItem1">
+									<img src="<%= getRelativePath('/images/sightseeing/img_adults05.jpg'); %>" alt="">
+								</div>
+								<div class="p-sightseeingCourse__flexItem2">
+									<div class="p-sightseeingCourse__flexTtl">
+										<div class="c-number"><span class="c-number__circle">5</span></div>
+										<p class="c-heading4">九州国立博物館</p>
+									</div>
+									<p class="c-text1">
+										太宰府天満宮のすぐそこにある、東京国立博物館・京都国立博物館・奈良国立博物館に次いで4番目の国立博物館。<br>
+										太宰府天満宮へは、動く歩道とエスカレーターの「アクセストンネル」で5分足らずでつながっています。<br>
+										<br>
+										【九州国立博物館 公式HP】<br>
+										<a href="http://www.kyuhaku.jp/" target="_blank">http://www.kyuhaku.jp/</a>
+									</p>
+								</div>
+							</div>
+						</div>
+					</section>
+<%- include('../_footer'); %>

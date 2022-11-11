@@ -1,0 +1,78 @@
+/* title */ 
+
+.c-heading1{
+    font-family: $font-family-mincho;
+    span {
+        color: #606060;
+        display: block;
+        font-weight: bold;
+        font-size: (16px / $font-size) * 1rem;
+        margin-top: 2px;
+    }
+    strong {
+        line-height: 1.12;
+        display: block;
+        font-weight: 400;
+    }
+    &.--size1 {
+        strong {
+            font-size: (50px / $font-size) * 1rem;
+        }
+    }
+    &.--size2 {
+        strong {
+            font-size: (41.6px / $font-size) * 1rem;
+        }
+        span {
+            margin-top: -1px;
+        }
+    }
+    &.--size3 {
+        strong {
+            font-size: (63px / $font-size) * 1rem;
+        }
+        span {
+            margin-top: -1px;
+        }
+    }
+    &.--color1 {
+        color: #000;
+    }
+    &.--color2 {
+        color: #0c7cad;
+    }
+    &.--color3 {
+        color: #ef3f82;
+    }
+    &.--color4 {
+        color: #00927d;
+    }
+    &.--right {
+        text-align: right;
+    }
+}
+
+//Phone
+// --------------------------------------------------
+@include media-breakpoint-sp {
+    .c-heading1 {
+        span {
+            font-size: (13px / $font-size) * 1rem;
+        }
+        &.--size3 {
+            strong {
+                font-size: (50px / $font-size) * 1rem;
+            }
+        }
+        &.--size1 {
+            strong {
+                font-size: (40px / $font-size) * 1rem;
+            }
+        }
+        &.--size2 {
+            strong {
+                font-size: (33px / $font-size) * 1rem;
+            }
+        }
+    }
+}

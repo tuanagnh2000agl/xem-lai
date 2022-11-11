@@ -1,0 +1,49 @@
+/* breadline */ 
+
+.c-breadline {
+    margin: 20px 0;
+    &__item {
+        display: inline-block;
+        font-weight: 500;
+        a {
+            color: #000;
+            transition: 0.3s all;
+            &:hover{
+                opacity: 0.7;
+            }
+        }
+        &.--active{
+            color: $blue;
+        }
+    }
+    &__divider {
+        margin: 0 6px;
+    }
+}
+
+
+// Desktop
+// --------------------------------------------------
+@include media-breakpoint-pc {
+    .c-breadline {
+        &__item {
+            a {
+                transition: 0.3s all;
+                &:hover{
+                    opacity: 0.7;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+// Tablet + Phone
+// --------------------------------------------------
+@include media-breakpoint-tab-sp {
+    .c-breadline {
+        display: none;
+    }
+}

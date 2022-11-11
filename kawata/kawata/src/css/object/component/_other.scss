@@ -1,0 +1,522 @@
+.c-blockNav1 {
+    display: flex;
+    align-items: flex-start;
+    &__img {
+        width: 45.83%;
+        border-radius: 18px;
+        background: transparent no-repeat center / cover;
+        margin-right: 4.17%;
+        height: 736px;
+        &:before {
+            content: "";
+            display: block;
+            padding-top: 133.85%;
+        }
+    }
+    &__cont {
+        width: 50%;
+        max-width: 480px;
+        padding: 15px 0 0;
+        &__inner {
+            max-width: 372px;
+            margin-left: auto;
+        }
+        .c-heading1 {
+            margin-bottom: 82px;
+        }
+        .desc {
+            margin-bottom: 32px;
+        }
+        &.--layout1 {
+            padding-top: 0;
+            .c-heading1 {
+                margin-bottom: 28px;
+            }
+        }
+    }
+}
+
+.c-blockNav2 {
+    position: relative;
+    &__img {
+        position: absolute;
+        height: 695px;
+        right: 0;
+        top: 0;
+        width: calc(50% + 28px);
+        border-radius: 20px 0 0 20px;
+        background: transparent no-repeat left center / cover;
+    }
+    &__inner {
+        max-width: calc(50% - 50px);
+    }
+    &__cont {
+        max-width: 374px;
+        padding: 3px 0 0;
+        .c-heading1 {
+            margin-bottom: 58px;
+        }
+    }
+}
+
+.c-info {
+    padding: 180px 0 0;
+    &__head {
+        border-top: 1px solid rgba(96,96,96,0.5);
+        font-size: (30px / $font-size) * 1rem;
+        font-weight: 400;
+        text-align: center;
+        color: #0c7cad;
+        padding: 100px 0 0;
+        margin-bottom: 26px;
+    }
+    &__note {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 20px 0 0;
+        .txt01 {
+            font-size: (14px / $font-size) * 1rem;
+            margin-top: 9px;
+            line-height: 1.6;
+        }
+        .u-textCircle {
+            margin-bottom: 4px;
+        }
+        &__left {
+            flex-shrink: 0;
+        }
+        &__right {
+            padding-right: 8px;
+            flex-shrink: 0;
+        }
+    }
+    &__map {
+        height: 500px;
+        overflow: hidden;
+        border-radius: 13px;
+        width: 100%;
+        position: relative;
+        margin: 46px 0 15px;
+        iframe {
+            position: absolute;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: calc(100% + 300px);
+            top: -131px;
+        }
+    }
+    
+}
+
+.c-tableTime {
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    text-align: center;
+    font-weight: 700;
+    .l-table__th {
+        font-weight: 700;
+        padding: 17.5px 10px;
+        vertical-align: middle;
+    }
+    .l-table__td {
+        font-size: (16px / $font-size) * 1rem;
+        color: #ea285f;
+        vertical-align: middle;
+    }
+    thead {
+        background-color: #00927d;
+        color: #fff;
+        .l-table__th {
+            padding: 17.5px 10px;
+        }
+    }
+    tbody {
+        background: #edf6f9;
+        tr {
+            border-bottom: 1px solid rgba(0,0,0,0.25);
+        }
+        .l-table__th {
+            padding: 23px 34px;
+        }
+        .l-table__td {
+            width: calc(75.5%/7);
+        }
+    }
+    &__head {
+        text-align: left;
+        .ttl {
+            font-size: (18px / $font-size) * 1rem;
+            color: #00927d;
+            span {
+                font-size: (16px / $font-size) * 1rem;
+                margin-left: 16px;
+            }
+        }
+        .sub {
+            font-size: (14px / $font-size) * 1rem;
+            color: #545454;
+            margin-top: 6px;
+            margin-left: 7px;
+        }
+    }
+    &__circle {
+        font-size: (16px / $font-size) * 1rem;
+        color: #004569;
+        position: relative;
+        padding-bottom: 8px;
+        small {
+            position: absolute;
+            font-size: (11px / $font-size) * 1rem;
+            font-weight: 400;
+            bottom: -16px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+    }
+   
+}
+
+.c-relative {
+    background: #ededed;
+    padding-top: 1px;
+    margin-top: 372px;
+    &__nav {
+        background: linear-gradient(0deg, #002a21, #00693e);
+        border-radius: 13px;
+        padding: 40px 20px 108px;
+        margin-top: -222px;
+        &__faq {
+            text-align: center;
+            margin-bottom: 98px;
+            a {
+                display: inline-block;
+                font-size: (50px / $font-size) * 1rem;
+                color: #fff;
+                font-weight: 400;
+                line-height: 1.38;
+            }
+            .c-link2 {
+                line-height: 0;
+                margin: 8px 0 0;
+                &__inner {
+                    span {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+        &__list {
+            max-width: 870px;
+            margin: 0 auto;
+            display: flex;
+            font-weight: 700;
+        }
+        &__item {
+            width: 33.33%;
+            text-align: center;
+            position: relative;
+            &:after {
+                position: absolute;
+                content: "";
+                top: 0;
+                bottom: 0;
+                width: 3px;
+                right: -1.5px;
+                border-left: 1px solid rgba(0, 0, 0,0.5);
+                border-right: 1px solid rgba(27, 150, 103,0.5);
+            }
+            &:nth-child(3n){
+                &:after{
+                    display: none;
+                }
+            }
+            .img {
+                height: 60px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 8px 0 30px;
+            }
+        }
+        
+    }
+    &__brand {
+        margin-top: 80px;
+        &__thank {
+            text-align: center;
+            margin-left: 50px;
+            margin-bottom: -7px;
+        }
+        &__row {
+            display: flex;
+            justify-content: center;
+            border-bottom: 1px solid rgba(96,96,96,0.5);
+            padding: 34px 0;
+        }
+        &__item {
+            width: 50%;
+            max-width: 406px;
+            padding: 0 38px;
+            a{
+                display: block;
+                border-radius: 7px;
+                overflow: hidden;
+                display: block;
+            }
+        }
+        
+        
+    }
+}
+.c-tel {
+    color: #00673d;
+    &__lable {
+        font-size: (20px / $font-size) * 1rem;
+        font-weight: 400;
+        margin-right: 4px;
+    }
+
+    &__link {
+        font-size: (30px / $font-size) * 1rem;
+        color: #00673d;
+    }
+}
+// Desktop
+// --------------------------------------------------
+@include media-breakpoint-pc {
+    
+}
+// Tablet + Phone
+// --------------------------------------------------
+@include media-breakpoint-tab-sp {
+    .c-tableTime {
+        thead {
+            font-size: (15px / $font-size) * 1rem;
+        }
+        tbody {
+            .l-table__th {
+                padding: 10px 20px;
+            }
+        }
+        .l-table__td {
+            font-size: (15px / $font-size) * 1rem;
+        }
+        &__circle {
+            font-size: (15px / $font-size) * 1rem;
+        }
+        &__head {
+            .ttl {
+                strong {
+                    margin-right: 12px;
+                }
+                span {
+                    font-size: (14px / $font-size) * 1rem;
+                    margin-left: 0;
+                    line-height: 1.17;
+                    display: inline-block;
+                }
+            }
+            .sub {
+                font-size: (11px / $font-size) * 1rem;
+                margin-left: 0;
+                margin-top: 2px;
+            }
+        }
+    }
+}
+//Phone
+// --------------------------------------------------
+@include media-breakpoint-sp {
+    .c-tel {
+        &__lable {
+            margin-right: 2px;
+        }
+    }
+    .c-relative {
+        margin-top: 272px;
+        &__brand {
+            margin-top: 35px;
+            &__row {
+                padding: 26px 0;
+                display: block;
+            }
+            &__item {
+                width: 100%;
+                padding: 0;
+                max-width: 272px;
+                margin: 0 auto;
+                &:not(:last-child) {
+                    margin-bottom: 12px;
+                }
+            }
+            &__thank {
+                margin-bottom: -14px;
+                margin-left: 18px;
+            }
+        }
+        &__nav {
+            padding: 18px 0 50px;
+            margin-top: -168px;
+            &__faq {
+                margin-bottom: 58px;
+                a {
+                    font-size: (40px / $font-size) * 1rem;
+                    font-size: 40px;
+                }
+                .c-link2 {
+                    margin-top: 6px;
+                }
+            }
+            &__item {
+                &:after {
+                    content: none;
+                }
+                .img {
+                    height: 45px;
+                    margin: 0;
+                }
+                .c-link2__inner {
+                    font-size: (12px / $font-size) * 1rem;
+                    padding-right: 0;
+                    &:after {
+                        display: block;
+                        position: static;
+                        margin: 0 auto;
+                        width: 16px;
+                        height: 16px;
+                        background-image: url(images/icon_arrowRCircle_sp.png);
+                        margin-top: 4px;
+                    }
+                }
+                
+            }
+        }
+    }
+    .c-tableTime {
+        thead {
+            line-height: 1.35;
+            padding: 10px 8px;
+            .l-table__th {
+                padding: 11px 9px;
+                &:last-child {
+                    padding-left: 0;
+                    padding-right: 12px;
+                }
+            }
+        }
+        tbody {
+            .l-table__th {
+                padding: 10px 0px 10px 9px;
+            }
+            tr:first-child .c-tableTime__head .ttl span {
+                text-indent: 5px;
+            }
+            .l-table__td {
+                width: calc(79%/7);
+                &:last-child {
+                    padding-left: 0;
+                    padding-right: 12px;
+                    min-width: 49px;
+                }
+            }
+        }
+        &__head {
+            .sub {
+                display: none;
+            }
+            .ttl {
+                span {
+                    display: block;
+                    margin-top: 2px;
+                }
+            }
+        }
+    }
+    
+    .c-info {
+        padding-top: 77px;
+        &__head {
+            font-size: (24px / $font-size) * 1rem;
+            padding-top: 40px;
+            margin-bottom: 14px;
+        }
+        &__map {
+            height: 340px;
+            margin-top: 38px;
+        }
+        &__note {
+            display: block;
+            margin-top: 28px;
+            .txt01 {
+                font-size: (13px / $font-size) * 1rem;
+                font-size: 13px;
+                line-height: 1.8;
+            }
+            &__right {
+                margin-top: 15px;
+            }
+        }
+    }
+
+    .c-blockNav1 {
+        flex-direction: column;
+        &__img {
+            height: auto;
+            width: 100%;
+            margin-right: 0;
+            order: 2;
+        }
+        &__cont {
+            padding: 0;
+            max-width: 100%;
+            width: 100%;
+            .c-heading1 {
+                margin-bottom: 48px;
+            }
+            &.--layout1 {
+                .c-heading1 {
+                    margin-bottom: 26px;
+                }
+            }
+            &__inner {
+                max-width: 100%;
+            }
+            .desc {
+                padding-right: 1px;
+                margin-bottom: 42px;
+            }
+        }
+        &__img {
+            margin-top: 45px;
+        }
+        
+    }
+
+    .c-blockNav2 {
+        &__inner {
+            max-width: 100%;
+        }
+        &__img {
+            position: static;
+            margin: 52px -15px 0 0;
+            width: auto;
+            height: auto;
+            &:before {
+                content: "";
+                display: block;
+                padding-top: 112.77%;
+            }
+        }
+        &__cont {
+            max-width: 100%;
+            padding: 0;
+            .c-heading1 {
+                margin-bottom: 34px;
+            }
+        }
+    }
+    
+}

@@ -1,0 +1,72 @@
+/* js */ 
+
+.js-fade__trigger {
+    opacity: 0;
+    &.js-fadein {
+        &.--fadeup {
+            animation: fadeup 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) 0s forwards;
+        }
+        &.--fadeleft {
+            animation: fadeleft 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) 0s forwards;
+        }
+        &.--faderight {
+            animation: faderight 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) 0s forwards;
+        }
+    }
+}
+
+.js-fade__delaytrigger {
+    & > * {
+        opacity: 0;
+        &.js-fadein {
+            &.--fadeup {
+                animation: fadeup 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) forwards;
+            }
+            &.--fadeleft {
+                animation: fadeleft 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) forwards;
+            }
+            &.--faderight {
+                animation: faderight 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) forwards;
+            }
+        }
+    }
+}
+
+
+/* keyframes */ 
+@keyframes fadeup {
+	0% {
+	    opacity: 0;
+	    transform: translateY(30px);
+	}
+	100%{
+		transform: translateY(0);
+	}
+	40% , 100% {
+		opacity: 1;
+	}
+}
+@keyframes fadeleft {
+	0% {
+	    opacity: 0;
+	    transform: translateX(-30px);
+	}
+	100%{
+		transform: translateX(0);
+	}
+	40% , 100% {
+		opacity: 1;
+	}
+}
+@keyframes faderight {
+	0% {
+	    opacity: 0;
+	    transform: translateX(30px);
+	}
+	100%{
+		transform: translateX(0);
+	}
+	40% , 100% {
+		opacity: 1;
+	}
+}

@@ -1,0 +1,112 @@
+.slick-slide {
+  width: 100%;
+  height: calc(100vh - 60px);
+  background-color: #555;
+  z-index: 1;
+  background: center center no-repeat;
+  background-size: cover;
+}
+
+.slick-arrow {
+  display: block;
+  overflow: hidden;
+  font-size: 0;
+  color: transparent;
+  text-decoration: none;
+  background-color: transparent;
+  outline: none;
+  z-index: 2;
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 1px solid #000;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.slick-next {
+  right: 20px;
+}
+
+.slick-next::after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-bottom: 4px solid #000;
+  border-right: 4px solid #000;
+  position: absolute;
+  left: 45%;
+  top: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+  transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+}
+
+.slick-prev {
+  left: 20px;
+}
+
+.slick-prev::after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-bottom: 4px solid #000;
+  border-right: 4px solid #000;
+  position: absolute;
+  right: 45%;
+  top: 50%;
+  -webkit-transform: translateX(50%) translateY(-50%) rotate(135deg);
+  transform: translateX(50%) translateY(-50%) rotate(135deg);
+}
+
+.slick-dots {
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.slick-dots li {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin: 0 15px;
+  position: relative;
+  cursor: pointer;
+}
+
+.slick-dots li button {
+  display: block;
+  background: transparent;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  font-size: 0;
+  border: none;
+  color: transparent;
+  padding: 5px;
+}
+
+.slick-dots li::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #fff;
+  border: 2px solid #000;
+}
+
+.slick-dots li.slick-active::before {
+  background: #000;
+  border: 2px solid #000;
+}

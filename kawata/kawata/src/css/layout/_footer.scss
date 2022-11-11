@@ -1,0 +1,136 @@
+.l-footer {
+	background-color: #ededed;
+    padding: 44px 0 0;
+	&__inner {
+		width: 100%;
+		max-width: 1240px;
+		margin: 0 auto;
+		padding: 0 20px;
+	}
+	&__row {
+		display: flex;
+		justify-content: space-between;
+	}
+	&__copyright {
+		text-align: center;
+		font-size: ( 14px / $font-size) * 1rem;
+	}
+	&__info1 {
+		.address {
+			font-size: ( 15px / $font-size) * 1rem;
+			line-height: 1.5;
+			margin-top: 6px;
+			.c-btnMap {
+				margin-left: 4px;
+				display: inline-block;
+			}
+		}
+		.sns {
+			margin-top: 12px;
+			ul li {
+				display: inline-block;
+				margin-right: 13px;
+			}
+		}
+		
+	}
+	&__info2 {
+		text-align: right;
+    	margin-top: 14px;
+		.ttl {
+			font-size: (16px / $font-size) * 1rem;
+			font-weight: 700;
+			color: #00673d;
+			margin-bottom: -3px;
+		}
+		.time {
+			font-size: 13px;
+			margin-top: -4px;
+		}
+	}
+	&__nav {
+		text-align: center;
+		margin: 72px 0 15px;
+		ul {
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+			li {
+				display: inline-block;
+				position: relative;
+				a {
+					padding: 0 20px;
+					font-size: (14px / $font-size) * 1rem;
+					line-height: 1.42;
+				}
+				&:not(:last-child):after {
+					content: "";
+					position: absolute;
+					right: 0;
+					top: 50%;
+					border-right: 1px solid #000;
+					height: 12px;
+					margin-top: -6px;
+				}
+			}
+		}
+	}
+	&__cpr {
+		text-align: center;
+		font-size: (9px / $font-size) * 1rem;
+		color: #00927d;
+		letter-spacing: 0.28em;
+		line-height: 3.1;
+		padding: 0 0 10px;
+	}
+}
+
+//Phone
+// --------------------------------------------------
+@include media-breakpoint-sp {
+	.l-footer {
+		padding-top: 26px;
+		&__inner {
+			padding: 0 15px 65px;
+		}
+		&__row {
+			flex-direction: column-reverse;
+			align-items: center;
+		}
+		&__info1 {
+			text-align: center;
+			.address {
+				font-size: (14px / $font-size) * 1rem;
+				margin-top: 8px;
+				.c-btnMap {
+					&__link {
+						font-size: (12px / $font-size) * 1rem;
+						padding-left: 13px;
+						&:before {
+							width: 10px;
+							height: 13px;
+							margin-top: -6px;
+						}
+					}
+				}
+			}
+		}
+		&__info2 {
+			margin: 0 0 50px;
+			text-align: center;
+		}
+		
+		&__nav {
+			margin: 68px -15px 6px;
+			ul li a {
+				font-size: 12px;
+				font-size: (12px / $font-size) * 1rem;
+				padding: 0 16px;
+			}
+		}
+		&__cpr {
+			padding-bottom: 14px;
+		}
+	}
+	
+}

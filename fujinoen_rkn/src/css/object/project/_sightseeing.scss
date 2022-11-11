@@ -1,0 +1,176 @@
+/* sightseeing */ 
+body.sightseeing {
+    .l-header {
+        &__item {
+            & > a {
+                span {
+                    &.sightseeing{
+                        background: url(./images/common/nav_sightseeing_red.png) no-repeat top center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.p-sightseeing{
+    &Map{
+        margin-top: 5em;
+        text-align: center;
+        iframe{
+            margin: 2em auto;
+            width: 100%;
+        }
+    }
+    &Course{
+        margin: 5em auto;
+        padding: 5em 20px;
+        &__inner{
+            text-align: center;
+            width: 100%;
+            max-width: $content-width;
+            background: #fff;
+            margin: 5em auto;
+            padding: 5em 20px;
+            .c-text1{
+                margin-bottom: 2em;
+            }
+        }
+        &__flex{
+            margin: 1em auto;
+            width: 100%;
+            max-width: 1000px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 50px;
+            &Item1{
+                width: 50%;
+                max-width: 450px;
+                margin: 0 auto;
+                img{
+                    width: 100%;
+                }
+            }
+            &Item2{
+                width: 50%;
+                .c-text1{
+                    text-align: left;
+                }
+                a{
+                    color: $blue;
+                }
+            }
+            &Ttl{
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                margin: 1em auto;
+                .c-heading4{
+                    font-family: $font-family-mincho;
+                    color: $blue;
+                }
+            }
+            &.--focus{
+                background-color: #f8f9ff;
+                max-width: 1060px;
+                padding: 50px;
+            }
+        }
+        &__line{
+            padding: 40px 0;
+            color: $red;
+            font-weight: bold;
+            position: relative;
+            &::before,&::after{
+                content: "";
+                width: 5px;
+                height: 25px;
+                background-image: url(./images/common/icon_dot.png);
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: contain;
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            &::after{
+                top: auto;
+                bottom: 0;
+            }
+            span{
+                position: relative;
+                padding-left: 30px;
+                &::before{
+                    content: "";
+                    width: 16px;
+                    height: 28px;
+                    background-image: url(./images/common/icon_walk.png);
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    background-size: contain;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    left: -0;
+                }
+                &.--car{
+                    padding-left: 52px;
+                    &::before{
+                        width: 42px;
+                        background-image: url(./images/common/icon_car.png);
+                    }
+                }
+                &.--train{
+                    padding-left: 30px;
+                    &::before{
+                        width: 28px;
+                        background-image: url(./images/common/icon_train.png);
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+// Tablet + Phone
+// --------------------------------------------------
+@include media-breakpoint-tab-sp {
+    .p-sightseeing{
+        &Map{
+            iframe{
+                height: 300px;
+            }
+        }
+        &Course{
+            
+            &__flex{
+                display: block;
+                &Item1{
+                    width: 100%;
+                }
+                &Item2{
+                    width: 100%;
+                }
+                &Ttl{
+                    .c-number__circle{
+                        width: 36px;
+                        height: 36px;
+                        font-size: 1.25rem;
+                    }
+                }
+                &.--focus{
+                    background-color: #f8f9ff;
+                    max-width: 1060px;
+                    padding: 20px;
+                }
+            }
+        }
+    }
+}
+

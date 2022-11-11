@@ -1,0 +1,14 @@
+/* display */ 
+
+@include media-breakpoint-pc{
+	.u-only__sp{
+		display: none !important;
+	}
+}
+
+
+@include media-breakpoint-tab-sp {
+    .u-only__pc {
+		display: none !important;
+	}
+}

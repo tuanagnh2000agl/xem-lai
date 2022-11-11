@@ -1,0 +1,306 @@
+.l-header {
+	background-color: $header-bg;
+	position: relative;
+	position: fixed;
+	width: 100%;
+	z-index: 100;
+	&__inner {
+		width: 100%;
+		max-width: 1650px;
+		margin: 0 auto;
+		padding: 0 2%;
+	}
+	&__content {
+		display: flex;
+		align-items: center;
+		height: 120px;
+		justify-content: space-between;
+		&.is-open {
+			position: fixed;
+			z-index: 100;
+			left: 20px;
+			right: 20px;
+		}
+	}
+
+	&__logo{
+		h1 {
+			display: block;
+			width: 100%;
+			height: 100%;
+		}
+		a {
+			img{
+				width: 100%;
+				max-width: 210px;
+			}
+			&:hover {
+				opacity: 0.7;
+			}
+		}
+	}
+	&__nav {
+		height: 100%;
+		width: 100%;
+	}
+	&__nav__inner {
+		height: 100%;
+	}
+	&__contents {
+		height: 100%;
+	}
+	&__list {
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+	}
+	&__item {
+		margin: 0 2%;
+		& > a {
+			display: block;
+			font-family: $font-family-mincho;
+			font-weight: bold;
+			color: #000;
+			height: 100%;
+			transition: 0.3s all;
+			span {
+				font-size:clamp(( 14px / $font-size) * 1rem, 1.5vw ,( 16px / $font-size) * 1rem);
+				text-align: center;
+				display: block;
+				padding-top: 42px;
+				background: url(./images/common/nav_home.png) no-repeat top center;
+				background-size: auto;
+				&.facility{
+					background: url(./images/common/nav_facility.png) no-repeat top center;
+				}
+				&.lodging{
+					background: url(./images/common/nav_lodging.png) no-repeat top center;
+				}
+				&.onsen{
+					background: url(./images/common/nav_onsen.png) no-repeat top center;
+				}
+				&.meal{
+					background: url(./images/common/nav_meal.png) no-repeat top center;
+				}
+				&.sightseeing{
+					background: url(./images/common/nav_sightseeing.png) no-repeat top center;
+				}
+				&.access{
+					background: url(./images/common/nav_access.png) no-repeat top center;
+				}
+			}
+			&:hover{
+				span {
+					background: url(./images/common/nav_home_red.png) no-repeat top center;
+					&.facility{
+						background: url(./images/common/nav_facility_red.png) no-repeat top center;
+					}
+					&.lodging{
+						background: url(./images/common/nav_lodging_red.png) no-repeat top center;
+					}
+					&.onsen{
+						background: url(./images/common/nav_onsen_red.png) no-repeat top center;
+					}
+					&.meal{
+						background: url(./images/common/nav_meal_red.png) no-repeat top center;
+					}
+					&.sightseeing{
+						background: url(./images/common/nav_sightseeing_red.png) no-repeat top center;
+					}
+					&.access{
+						background: url(./images/common/nav_access_red.png) no-repeat top center;
+					}
+				}
+			}
+		}
+	}
+	&__contact{
+		display: $flex;
+		justify-content: space-between;
+		white-space: nowrap;
+		font-weight: bold;
+		font-family: $font-family-mincho;
+		&--phone{
+			text-align: center;
+			.tel{
+				display: inline-block;
+				color: $blue;
+				font-size:clamp(( 12px / $font-size) * 1rem, 1.5vw ,( 18px / $font-size) * 1rem);
+				padding-left: 25px;
+				margin-bottom: .25em;
+				background: url(./images/common/icon_tel_blue.png) no-repeat left;
+			}
+			.mail{
+				a{
+					font-size:clamp(( 12px / $font-size) * 1rem, 1.5vw ,( 16px / $font-size) * 1rem);
+					max-width: 190px;
+					width: 100%;
+				}
+			}
+		}
+		&--other{
+			color: $blue;
+			font-size:clamp(( 10px / $font-size) * 1rem, 1.5vw ,( 14px / $font-size) * 1rem);
+			line-height: 1.4;
+			margin-top: .5em;
+			.language{
+				display: block;
+				margin-top: .5em;
+				a{
+					font-weight: bold;
+					font-family: $font-family-gothic;
+					color: $blue;
+					transition: 0.3s all;
+					&:hover{
+						border-bottom: 1px solid $red;
+					}
+				}
+				span{
+					margin: 0 0.5em;
+				}
+			}
+		}
+	}
+
+}
+// icon click open and close menu
+.l-menu__button {
+	display: none;
+	position: relative;
+	z-index: 20;
+	margin: 0;
+}
+
+// active menu
+.is-click2{
+	display: none;
+}
+
+// Desktop
+// --------------------------------------------------
+@include media-breakpoint-pc {
+	.l-header {
+		&__nav {
+			display: block !important;
+			max-width: 50%;
+		}
+		&__link{
+			padding: 0;
+		}
+		&__logo{
+			width: 20%;
+			min-width: 140px;
+		}
+		&__contact{
+			max-width: 360px;
+			width: 30%;
+			&--phone {
+				padding-right: 5%;
+				width: 100%;
+			}
+		}
+	}
+}
+
+// Tablet + Phone
+// --------------------------------------------------
+@include media-breakpoint-tab-sp {
+	.l-header {
+		&__nav {
+			display: none;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			margin-top: 80px;
+			background-color: $white;
+			z-index: 10;
+			overflow: scroll;
+		}
+		&__logo{
+			padding-top: 10px;
+			width: 116px;
+		}
+		&__content {
+			height: 80px;
+		}
+		&__list{
+			height: unset;
+			padding: 15px 20px 0;
+			flex-wrap: wrap;
+			gap: 10px;
+			font-size: ( 16px / $font-size) * 1rem;
+			justify-content: flex-start;
+		}
+		&__item{
+			width: calc(100%/2 - 10px);
+			margin: 0;
+			a{
+				position: relative;
+				padding: 1em 0;
+				span{
+					&::after{
+						content: "";
+						position: absolute;
+						width: 24px;
+						height: 8px;
+						background: url("./images/common/icon_arrow_blue.png") no-repeat;
+						right: 13%;
+						bottom: 26px;
+					}
+				}
+
+			}
+		}
+		&__contact{
+			margin: 0 auto;
+			&--other{
+				.language{
+					font-size: ( 14px / $font-size) * 1rem;
+				}
+			}
+		}
+		&__link{
+			display: inline-flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			width: 100%;
+			height: 100%;
+			box-shadow: 0 0 10px #e5e5e5;
+		}
+	}
+	.l-menu__button {
+		display: block;
+		width: 52px;
+		height: 52px;
+	}
+	.l-header__menusp{
+		padding: 40px 20px;
+		height: 65%;
+		font-weight: bold;
+		p{
+			font-family: $font-family-mincho;
+			color: $blue;
+			&.txt{
+				font-size: 1.125rem;
+				margin-bottom: 1em;
+			}
+			&.copy{
+				font-family: $font-family-gothic;
+				font-size: 0.875rem;
+			}
+		}
+		a{
+			margin-bottom: 20px;
+			&.txt{
+				color: $blue;
+				display: block;
+				margin: 1em auto 2em;
+			}
+		}
+		
+	}
+}

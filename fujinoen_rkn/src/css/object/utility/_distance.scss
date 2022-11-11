@@ -1,0 +1,20 @@
+.l-content.u-padding{
+    padding-top: 120px;
+    @include media-breakpoint-tab-sp{
+        padding-top: 80px;
+	}
+}
+.l-footer{
+    &.u-margin{
+        margin-top: 190px;
+        @include media-breakpoint-tab-sp{
+            margin-top: 140px;
+        }
+    }
+    &.u-margin1{
+        margin-top: 161px;
+        @include media-breakpoint-tab-sp{
+            margin-top: 110px;
+        }
+    }
+}

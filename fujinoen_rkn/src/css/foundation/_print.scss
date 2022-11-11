@@ -1,0 +1,13 @@
+// Print
+// --------------------------------------------------
+@media print {
+	* {
+		-webkit-print-color-adjust: exact !important;
+	}
+	body {
+		zoom: .8;
+	}
+	#header {
+		position: absolute !important;
+	}
+}

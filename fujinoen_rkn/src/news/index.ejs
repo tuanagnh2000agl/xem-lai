@@ -1,0 +1,91 @@
+<%- include('../_config', { extend: {
+	relativePath: '..',
+	page: {
+		category: 'news',
+		id: 'index',
+		title: 'お知らせ',
+		titlehtml: '',
+		description: 'お知らせのディスクリプションです。',
+	}
+}}); %><%- include('../_header'); %>
+					<section class="p-news">
+						<div class="l-inner --small">
+							<div class="u-center">
+								<h3 class="c-heading1 --mb2"><span>News</span>お知らせ一覧</h3>
+							</div>
+							<div class="c-news">
+								<ul class="c-news__list">
+									<li class="c-news__item --new">
+										<a href="<%= getRelativePath('/news/editor.html'); %>">
+											<div class="c-news__day">2022.00.00 </div>
+											<div class="c-news__title">テキストテキストテキストテキストテキストテキストテキスト…</div>
+										</a>
+									</li>
+									<li class="c-news__item">
+										<a href="<%= getRelativePath('/'); %>">
+											<div class="c-news__day">2022.00.00 </div>
+											<div class="c-news__title">テキストテキストテキストテキストテキストテキストテキスト…</div>
+										</a>
+									</li>
+									<li class="c-news__item">
+										<a href="<%= getRelativePath('/'); %>">
+											<div class="c-news__day">2022.00.00 </div>
+											<div class="c-news__title">テキストテキストテキストテキストテキストテキストテキスト…</div>
+										</a>
+									</li>
+									<li class="c-news__item">
+										<a href="<%= getRelativePath('/'); %>">
+											<div class="c-news__day">2022.00.00 </div>
+											<div class="c-news__title">テキストテキストテキストテキストテキストテキストテキスト…</div>
+										</a>
+									</li>
+									<li class="c-news__item">
+										<a href="<%= getRelativePath('/'); %>">
+											<div class="c-news__day">2022.00.00 </div>
+											<div class="c-news__title">テキストテキストテキストテキストテキストテキストテキスト…</div>
+										</a>
+									</li>
+									<li class="c-news__item">
+										<a href="<%= getRelativePath('/'); %>">
+											<div class="c-news__day">2022.00.00 </div>
+											<div class="c-news__title">テキストテキストテキストテキストテキストテキストテキスト…</div>
+										</a>
+									</li>
+									<li class="c-news__item">
+										<a href="<%= getRelativePath('/'); %>">
+											<div class="c-news__day">2022.00.00 </div>
+											<div class="c-news__title">テキストテキストテキストテキストテキストテキストテキスト…</div>
+										</a>
+									</li>
+									<li class="c-news__item">
+										<a href="<%= getRelativePath('/'); %>">
+											<div class="c-news__day">2022.00.00 </div>
+											<div class="c-news__title">テキストテキストテキストテキストテキストテキストテキスト…</div>
+										</a>
+									</li>
+									<li class="c-news__item">
+										<a href="<%= getRelativePath('/'); %>">
+											<div class="c-news__day">2022.00.00 </div>
+											<div class="c-news__title">テキストテキストテキストテキストテキストテキストテキスト…</div>
+										</a>
+									</li>
+									<li class="c-news__item">
+										<a href="<%= getRelativePath('/'); %>">
+											<div class="c-news__day">2022.00.00 </div>
+											<div class="c-news__title">テキストテキストテキストテキストテキストテキストテキスト…</div>
+										</a>
+									</li>
+								</ul>
+								<div class="c-pagination">
+									<ul class="c-pagination__list">
+										<li class="c-pagination__item --prev"><a href="<%= getRelativePath('/news/'); %>">PREV</a></li>
+										<li class="c-pagination__item"><span>1</span></li>
+										<li class="c-pagination__item"><a href="<%= getRelativePath('/news/'); %>"><span>2</span></a></li>
+										<li class="c-pagination__item"><a href="<%= getRelativePath('/news/'); %>"><span>3</span></a></li>
+										<li class="c-pagination__item --next"><a href="<%= getRelativePath('/news/'); %>">NEXT</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</section>
+<%- include('../_footer'); %>

@@ -1,0 +1,164 @@
+.c-slider {
+    @include media-breakpoint-sp{
+        height: 180px;
+        .slick-list, .slick-track{
+            height: 100%;
+            li{
+                overflow: hidden;
+            }
+            img{
+                height: 180px;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+    img {
+        width:100%;/*スライダー内の画像を横幅100%に*/
+        height:auto;
+    }
+    &--rtl{
+        img {
+            width:100%;/*スライダー内の画像を横幅100%に*/
+            height:auto;
+        }
+        @include media-breakpoint-sp{
+            height: 180px;
+            .slick-list, .slick-track{
+                height: 100%;
+                li{
+                    overflow: hidden;
+                }
+                img{
+                    height: 180px;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}
+
+/*slickのJSで書かれるタグ内、スライド左右の余白調整*/
+.c-slider .slick-slide, .c-slider--rtl .slick-slide {
+    margin:0 13px;/*スライド左右の余白調整*/
+    @include media-breakpoint-sp{
+        margin:0 6px;/*スライド左右の余白調整*/
+    }
+}
+
+// slider manvisual
+
+.slick-slide {
+    width: 100%;
+    background-color: #555;
+    z-index: 1;
+    background: center center no-repeat;
+    background-size: cover;
+}
+
+.slick-arrow {
+    // reset
+    display: block;
+    overflow: hidden;
+    font-size: 0;
+    color: transparent;
+    text-decoration: none;
+    background-color: transparent;
+    outline: none;
+    z-index: 2;
+    cursor: pointer;
+    
+    // dezain
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 1px solid #000;
+
+    // position 
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.slick-next {
+    right: 20px;
+    &::after {
+        content: "";
+        display: block;
+        width: 20px;
+        height: 20px;
+        border-bottom: 4px solid #000;
+        border-right: 4px solid #000;
+        position: absolute;
+        left: 45%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+    }
+}
+.slick-prev {
+    left: 20px;
+    &::after {
+        content: "";
+        display: block;
+        width: 20px;
+        height: 20px;
+        border-bottom: 4px solid #000;
+        border-right: 4px solid #000;
+        position: absolute;
+        right: 45%;
+        top: 50%;
+        transform: translateX(50%) translateY(-50%) rotate(135deg);
+    }
+}
+
+.slick-dots {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) ;
+    bottom: 20px;
+    li {
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        margin: 0 5px;
+        position: relative;
+        cursor: pointer;
+        button {
+            // reset
+            display: block; 
+            background: transparent;
+            width: 100%;
+            height: 100%;
+            outline: none;
+            font-size: 0;
+            border: none;
+            color: transparent;
+            padding: 5px;
+        }
+        &::before {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: #fff;
+            border: 1px solid $blue;
+        }
+
+        &.slick-active {
+            &::before {
+                background: $blue;
+                border: 2px solid $blue;
+            }
+        }
+    }
+}
+
+
+
+
